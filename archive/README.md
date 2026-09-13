@@ -2,24 +2,24 @@
 
 Status: **complete**
 
-Snapshot: 2026-09-13T09:46:39.523414+00:00 — 2026-09-13T09:48:56.530596+00:00
+Snapshot: 2026-09-13T10:23:40.123068+00:00 — 2026-09-13T10:26:10.503007+00:00
 
 All accessible open/closed issues, PR conversations/reviews/commit comments, releases, tags, and GitHub-hosted attachments. This is a time-bounded API snapshot, not an atomic Git mirror. Deleted or inaccessible source material cannot be recovered.
 
 ## Contents
 
 - issues: 60
-- pull_requests: 6
-- issue_comments: 167
-- pr_comments: 1
-- reviews: 0
-- review_comments: 0
+- pull_requests: 10
+- issue_comments: 174
+- pr_comments: 2
+- reviews: 1
+- review_comments: 5
 - commit_comments: 0
 - releases: 4
 - tags: 4
 - release_source_archives: 8
-- assets: 401
-- asset_bytes: 1895824852
+- assets: 406
+- asset_bytes: 1909386301
 
 [Raw metadata and checksums](manifest.json)
 
@@ -91,12 +91,20 @@ All accessible open/closed issues, PR conversations/reviews/commit comments, rel
 - [metadata/pulls/64/issue.json](metadata/pulls/64/issue.json)
 - [metadata/pulls/65/issue.json](metadata/pulls/65/issue.json)
 - [metadata/pulls/66/issue.json](metadata/pulls/66/issue.json)
+- [metadata/pulls/67/issue.json](metadata/pulls/67/issue.json)
+- [metadata/pulls/68/issue.json](metadata/pulls/68/issue.json)
+- [metadata/pulls/69/issue.json](metadata/pulls/69/issue.json)
+- [metadata/pulls/70/issue.json](metadata/pulls/70/issue.json)
 - [metadata/pulls/61/pull.json](metadata/pulls/61/pull.json)
 - [metadata/pulls/62/pull.json](metadata/pulls/62/pull.json)
 - [metadata/pulls/63/pull.json](metadata/pulls/63/pull.json)
 - [metadata/pulls/64/pull.json](metadata/pulls/64/pull.json)
 - [metadata/pulls/65/pull.json](metadata/pulls/65/pull.json)
 - [metadata/pulls/66/pull.json](metadata/pulls/66/pull.json)
+- [metadata/pulls/67/pull.json](metadata/pulls/67/pull.json)
+- [metadata/pulls/68/pull.json](metadata/pulls/68/pull.json)
+- [metadata/pulls/69/pull.json](metadata/pulls/69/pull.json)
+- [metadata/pulls/70/pull.json](metadata/pulls/70/pull.json)
 
 ## Attachments
 
@@ -232,6 +240,7 @@ Large attachments are split into ordered parts below 40 MiB; manifest checksums 
 - 7efdafe0ddbf25a7 — 1396111 bytes — [part 1](assets/7e/7efdafe0ddbf25a73dd0ba949babb29147957a450e85abc3acbde079ad0dd003.mp4)
 - ca99e5f9d7c6c761 — 3746993 bytes — [part 1](assets/ca/ca99e5f9d7c6c76191fc1b1fe0d03502276b0088c1e7ea3426b6e4e6fbd178d3.jpg)
 - fa400a2ca7691ca5 — 3707470 bytes — [part 1](assets/fa/fa400a2ca7691ca5b56800038c7f7e3464601cc7ff277ed9b38d2703b0f61919.mp4)
+- a367f583aa4a1b09 — 345206 bytes — [part 1](assets/a3/a367f583aa4a1b0933fb7c4044e3abd4593d4c6cb5ea68ad762245feb2b57abf.jpg)
 - 4eaeea9fc2c96f11 — 3444047 bytes — [part 1](assets/4e/4eaeea9fc2c96f1180dacf3b0b1d83b3640f15d0ceae3c62a3fcb0848953ef11.jpg)
 - 517307875110cd5b — 3699522 bytes — [part 1](assets/51/517307875110cd5b68f7cd3dd7adf3f875880cef207e79665bfdda6d042c9218.mp4)
 - 11e49784bab0809f — 3971534 bytes — [part 1](assets/11/11e49784bab0809f8611b63faeb282d1d25f5658e02e15b52480b9148ab32e10.mp4)
@@ -241,6 +250,7 @@ Large attachments are split into ordered parts below 40 MiB; manifest checksums 
 - 3603995f540a22b1 — 10577236 bytes — [part 1](assets/36/3603995f540a22b1ebdcdc928a54b5bfa1a3048499aa644a6157a265bbc611a4.mp4)
 - ebe95a26941a20b2 — 2676174 bytes — [part 1](assets/eb/ebe95a26941a20b21ee38ac87434f43a1f1f5717ca806096da9335e7f861ccad.mp4)
 - 48188a637158d9a5 — 2808122 bytes — [part 1](assets/48/48188a637158d9a55f24f2a4b2fd7b3a73a68a7f59c8fe82d06e68a64987821f.jpg)
+- 71f7f50a8551afdd — 9716974 bytes — [part 1](assets/71/71f7f50a8551afdd188060498cde1c65e0e34f7e502362005e5b5573efb4d463.mp4)
 - 5a53d4bfcfc89947 — 1776326 bytes — [part 1](assets/5a/5a53d4bfcfc89947acde64cb11d957de0c0f4c4061414208c37b0183f609d00b.jpg)
 - ff7303f57cdde05a — 2993899 bytes — [part 1](assets/ff/ff7303f57cdde05a2e9d9a460eaa27d1c44f1cf01b40a1b7bb7162235649e6e1.mp4)
 - 504f71c6cffd0ba1 — 7567344 bytes — [part 1](assets/50/504f71c6cffd0ba1334407a6085f882404480d6bf750ff1a9309b27d30017db5.mp4)
@@ -345,6 +355,7 @@ Large attachments are split into ordered parts below 40 MiB; manifest checksums 
 - bc27b9b66748fc03 — 3919746 bytes — [part 1](assets/bc/bc27b9b66748fc0377726f9ffbbe9801cda66da3be5bef0113302df0c9e170dc.mp4)
 - 59c12eef14df22a6 — 3948593 bytes — [part 1](assets/59/59c12eef14df22a6e1f5fce22bf78fd0425ac7eb3a21206191278226134985f9.mp4)
 - 8b397e9bc525d710 — 2917479 bytes — [part 1](assets/8b/8b397e9bc525d710c9983190b11f4b0e337b550de083e45a5e49d162b0c8cca2.mp4)
+- 80b4371cd7dba896 — 140082 bytes — [part 1](assets/80/80b4371cd7dba89618c3372f8e4a11c7a0608418c7225e8c5aad1eca767699c6.jpg)
 - a2f77003f26391fe — 3516528 bytes — [part 1](assets/a2/a2f77003f26391fe8d25784398faf503ef9956783cd23948197d8b02eedf0d3a.jpg)
 - 238bf2a0af42efc2 — 496692 bytes — [part 1](assets/23/238bf2a0af42efc2b327544088b19f258b311f79c4dc19c6899d88044df952ba.jpg)
 - ebc6ec4916adc502 — 9588189 bytes — [part 1](assets/eb/ebc6ec4916adc50240cecf40752a07e7172f590fd65eb3c1e86a4be267e8bacf.mp4)
@@ -399,6 +410,7 @@ Large attachments are split into ordered parts below 40 MiB; manifest checksums 
 - 051894fb97c01bc7 — 3861508 bytes — [part 1](assets/05/051894fb97c01bc709f74413c6f5a8c7cccbd5702d07b5bb70af9f8f90594ed6.mp4)
 - a9a58b2598726a1a — 5134768 bytes — [part 1](assets/a9/a9a58b2598726a1a6d3f002008dd8cc734dc4f79f9be333843522d603d7957bc.jpg)
 - d1f265620a61d386 — 2067131 bytes — [part 1](assets/d1/d1f265620a61d386b190f3effbfd137d3d4ebfa18622ad2276091a32d377d822.jpg)
+- 4983e6855f3c9f53 — 3059713 bytes — [part 1](assets/49/4983e6855f3c9f533dee389deec1c82b8de9a9990df9fd484c95fdbc2aaeedab.jpg)
 - 18c70a895c804636 — 2986639 bytes — [part 1](assets/18/18c70a895c804636e2bc96c92d3d57bc74f2268a11cb242ef5fa23b9e81e31ae.mp4)
 - 7c9dbd1815bfbf6c — 881789 bytes — [part 1](assets/7c/7c9dbd1815bfbf6c981bda1ac62385577ea925df199e977c3fffe5ded7b61cf6.jpg)
 - 3c63bca270fafac4 — 883888 bytes — [part 1](assets/3c/3c63bca270fafac4d878a5e903592a3debb0f1388f1fbcce2dab8c9f37d31793.jpg)
@@ -408,6 +420,7 @@ Large attachments are split into ordered parts below 40 MiB; manifest checksums 
 - 5e11c3feb3ded668 — 10361478 bytes — [part 1](assets/5e/5e11c3feb3ded6681539c53beb3fb592ad81cfd5d27e34d462c6314c728d282e.mp4)
 - 8068ac4e44be1887 — 8319247 bytes — [part 1](assets/80/8068ac4e44be188700c2bf71cec56f3b157101caf1b435d7e7626adafaab4813.mp4)
 - e6b6b6a4e258feb7 — 2440403 bytes — [part 1](assets/e6/e6b6b6a4e258feb787648c93daaa290dfa042bf6b6f62131a2ab8bcf41facd88.jpg)
+- 21c167eed467b84c — 299474 bytes — [part 1](assets/21/21c167eed467b84cf5780dc3c213e700aa2e734a8d87f73d8c105c4f838730ef.jpg)
 - f748f4594fb8a00f — 2988365 bytes — [part 1](assets/f7/f748f4594fb8a00f88666d2032f711da6eea58d232d447abf47a98be4490eef0.mp4)
 - b880eea8bd8cc779 — 3738895 bytes — [part 1](assets/b8/b880eea8bd8cc7797a62c9c1f610abeb96b17bf005ef751a51c491119922c95c.mp4)
 - 4730bfa03f61a2be — 25418 bytes — [part 1](assets/47/4730bfa03f61a2bea17c6b06bddddd1ef6d8567f856b86c8deaa43d421f13d0d.png)
