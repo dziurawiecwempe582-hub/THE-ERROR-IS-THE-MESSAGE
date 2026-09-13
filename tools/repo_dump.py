@@ -290,7 +290,13 @@ class Archive:
         temporary = Path(tempfile.mkdtemp(prefix=".repo-archive-", dir=safe_path(self.output, "assets")))
         try:
             chunks, total, digest = [], 0, hashlib.sha256()
-            with self.client._open(url, "application/octet-stream") as response:
+            parsed = urlparse(url)
+            # Source archive API endpoints reject octet-stream with HTTP 415.
+            # Their JSON media type requests a redirect to the binary archive.
+            source_archive = (parsed.hostname == "api.github.com" and
+                              re.match(r"/repos/[^/]+/[^/]+/(zipball|tarball)/", parsed.path))
+            accept = "application/vnd.github+json" if source_archive else "application/octet-stream"
+            with self.client._open(url, accept) as response:
                 content_type = response.headers.get("Content-Type", "application/octet-stream").split(";")[0]
                 if content_type == "text/html" and "attachment" not in response.headers.get("Content-Disposition", "").lower():
                     raise ValueError("Received HTML instead of an attachment")

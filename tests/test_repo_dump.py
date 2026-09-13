@@ -420,6 +420,21 @@ class ArchiveEndToEndTests(unittest.TestCase):
         self.assertEqual(set(client.downloads), urls)
         self.assertEqual(dump.verify_archive(self.output), [])
 
+    def test_source_archive_api_accept_is_json_while_attachment_accept_is_binary(self):
+        client = FixtureClient(populated=False)
+        archive = dump.Archive("owner/project", self.output, client)
+        requests = [
+            (f"https://api.github.com{client.prefix}/zipball/v1", "application/vnd.github+json"),
+            (f"https://api.github.com{client.prefix}/tarball/v1", "application/vnd.github+json"),
+            (f"https://api.github.com{client.prefix}/releases/assets/71", "application/octet-stream"),
+            (client.comment_attachment, "application/octet-stream"),
+        ]
+        for url, expected_accept in requests:
+            with self.subTest(url=url), mock.patch.object(client, "_open", wraps=client._open) as opened:
+                asset = archive._download(url)
+                opened.assert_called_once_with(url, expected_accept)
+                self.assertEqual(dump.verify_asset(self.output, asset), [])
+
     def test_failed_release_source_archive_makes_snapshot_partial(self):
         client = FixtureClient(populated=False)
         url = f"https://api.github.com{client.prefix}/zipball/v1"
