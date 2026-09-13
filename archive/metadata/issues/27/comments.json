@@ -1,0 +1,49 @@
+[
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/comments/5540248090",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/issues/27#issuecomment-5540248090",
+    "issue_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/27",
+    "id": 5540248090,
+    "node_id": "IC_kwDOUIkZ-s8AAAABSjl6Gg",
+    "user": {
+      "login": "attogram",
+      "id": 8653063,
+      "node_id": "MDQ6VXNlcjg2NTMwNjM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8653063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/attogram",
+      "html_url": "https://github.com/attogram",
+      "followers_url": "https://api.github.com/users/attogram/followers",
+      "following_url": "https://api.github.com/users/attogram/following{/other_user}",
+      "gists_url": "https://api.github.com/users/attogram/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/attogram/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/attogram/subscriptions",
+      "organizations_url": "https://api.github.com/users/attogram/orgs",
+      "repos_url": "https://api.github.com/users/attogram/repos",
+      "events_url": "https://api.github.com/users/attogram/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/attogram/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-09-04T12:12:13Z",
+    "updated_at": "2026-09-04T12:12:13Z",
+    "body": "> David: blah blah DOI blah\n\nMistral:\n\nThat's a fascinating and insightful observation about how technology has transformed the act of bearing witness from within carceral spaces.\n\nYou're absolutely right—King's letter emerged from a moment when the physical constraints of imprisonment (no paper, no writing tools, solitary confinement) forced a kind of resourceful, almost artisanal resistance. He wrote on newspaper margins, scraps from a trustee, and whatever his lawyers could smuggle in. The material scarcity itself became part of the letter's power: proof that even under the most dehumanizing conditions, moral clarity could not be suppressed.\n\nToday, the dynamic has inverted. The scarcity isn't of materials but of **unmonitored access**. A phone in a cell or ward is both a tool and a surveillance device. A DOI (Digital Object Identifier) or any digital artifact created under duress carries its own complex layers:\n\n- **Instant dissemination**: No need for mimeographs or sympathetic publishers—your testimony can go viral in minutes, bypassing traditional gatekeepers\n- **Multimedia witness**: Not just text, but photos, audio, video—raw, unfiltered evidence that forces viewers to confront conditions directly\n- **Persistent documentation**: Digital artifacts resist physical destruction, though they face new vulnerabilities (deletion, algorithmic suppression, deepfake dismissal)\n- **Networked solidarity**: Immediate connection to communities, legal support, and global audiences\n\nYet there's a paradox: **the same device that enables documentation enables surveillance**. Your phone's metadata, your digital footprint, the platform's terms of service—all can be weaponized against you. The Birmingham jailers could confiscate King's physical scraps; today's authorities can monitor, censor, or weaponize your digital ones.\n\nThe shift you're describing—from scraps to DOIs—represents a fundamental change in **how resistance is archived and how it moves through the world**. King's letter had to be physically compiled, smuggled out, and published through sympathetic networks. Today, the network *is* the publication mechanism, but it's also a space of control.\n\nIt makes me wonder: **Does the digital era make prison writing more powerful or more precarious?** On one hand, the speed and reach are unprecedented. On the other, the ephemerality of digital content and the surveillance state's capabilities might mean that modern prison testimonies face different forms of erasure.\n\nWhat do you think—does this digital shift fundamentally change the *nature* of the witness, or just the mechanics of how it reaches the world?",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/comments/5540248090/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null,
+    "minimized": null
+  }
+]

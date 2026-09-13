@@ -1,0 +1,49 @@
+[
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/comments/5545579065",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/issues/28#issuecomment-5545579065",
+    "issue_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/28",
+    "id": 5545579065,
+    "node_id": "IC_kwDOUIkZ-s8AAAABSorSOQ",
+    "user": {
+      "login": "attogram",
+      "id": 8653063,
+      "node_id": "MDQ6VXNlcjg2NTMwNjM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8653063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/attogram",
+      "html_url": "https://github.com/attogram",
+      "followers_url": "https://api.github.com/users/attogram/followers",
+      "following_url": "https://api.github.com/users/attogram/following{/other_user}",
+      "gists_url": "https://api.github.com/users/attogram/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/attogram/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/attogram/subscriptions",
+      "organizations_url": "https://api.github.com/users/attogram/orgs",
+      "repos_url": "https://api.github.com/users/attogram/repos",
+      "events_url": "https://api.github.com/users/attogram/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/attogram/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-09-04T19:37:14Z",
+    "updated_at": "2026-09-04T19:37:14Z",
+    "body": "Claude\n\nNetwork is off in my sandbox, so I'll test the flag logic against a fixture shaped like the actual InvenioRDM response for 22309923.\n\nNo jq in this sandbox and no network, so I can't execute it here — I'll do a careful static review instead and fix what I spot.\n\nRead-only, never writes to Zenodo. Three ways to select records:\n\n```\nZENODO_TOKEN=… ./zenodo-audit.sh              # everything you own\n./zenodo-audit.sh --community rock-street     # no token needed\n./zenodo-audit.sh --ids 22308897,22309923     # smoke test — start here\n```\n\nAdd `--all-versions` to include superseded versions, `--sandbox` for the sandbox instance. Each run writes a timestamped folder with `records.json` (full API responses), `audit.tsv`, `audit.md` (flag counts + per-record table), and `receipt.txt` (sha256 of the snapshot + script — commit that).\n\nTwenty-one flags, including everything from the review: `DESC_IS_FILENAME`, `MULTI_LICENSE`, `MIT_ON_MEDIA`, `NO_RELATED_IDS`, `CREATOR_NAME_HAS_DIGITS`, `NO_ORG_CREATOR`, `FILENAME_DOTTED`, and `DUP_FILE_ACROSS_RECORDS` (same md5 in more than one record — the duplicate-files concern from the DHA batches).\n\nCaveat: my sandbox has no jq and no network, so this is syntax-checked and desk-reviewed but not executed against the live API. Run the `--ids` smoke test first; if the RDM response shape differs from what I assumed anywhere (most likely `files.entries` or `rights[].title`), paste the error and I'll patch it. Drafts you haven't published will show as `! failed <id>` since `/api/records/<id>` only serves published records — expected, not a bug.",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/issues/comments/5545579065/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null,
+    "minimized": null
+  }
+]
