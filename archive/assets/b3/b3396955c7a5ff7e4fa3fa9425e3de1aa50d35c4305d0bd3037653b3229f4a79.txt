@@ -1,0 +1,630 @@
+The Provo 42 / Rock Street Project: From Personal Workflow to Independent Institution
+
+1. The project has outgrown the concept of “an archive”
+
+The project has reached a scale where an AI assistant is no longer merely convenient. It is becoming necessary infrastructure.
+
+The material being produced includes:
+
+- academic papers and manifestos;
+- short videos;
+- soundtracks and other audio;
+- podcasts and podcast transcripts;
+- screen recordings of AI-generated/read material;
+- photographs and screenshots;
+- life-blog material;
+- experiments and field observations;
+- GitHub repositories, issues, commits and discussions;
+- Zenodo deposits and DOI records;
+- documentation of failures and errors;
+- and all the strange miscellaneous material that accumulates around a living project—including food, dogs, crows, and entire studies of crow behavior.
+
+The project already has 69 Zenodo DOIs, with new material continuing to be produced.
+
+The important realization is that the old concept of a single “index” is no longer sufficient.
+
+---
+
+2. The original index was already enormous
+
+The original attempt at creating an index was essentially one GitHub repository containing a listing of issues from many other repositories.
+
+There were approximately 15–20 repositories involved.
+
+Individual repositories could contain:
+
+- around 25 issues;
+- 50 issues;
+- 100–200 issues;
+- and in the largest cases, roughly 300 issues.
+
+That means the original “index” was already effectively an index of thousands of individual research/project units.
+
+And that index itself is now roughly a month and a half out of date.
+
+The conclusion is that the project doesn't simply need a larger Markdown index.
+
+It needs a fundamentally better information architecture.
+
+---
+
+3. The corpus is distributed across many systems
+
+The project does not follow a single linear archival workflow.
+
+Material can originate on:
+
+- a phone;
+- a laptop;
+- another device;
+
+and then move through:
+
+- WhatsApp;
+- Telegram;
+- GitHub repositories;
+- GitHub issues;
+- GitHub commits;
+- Zenodo;
+
+or sometimes go directly to Zenodo.
+
+Sometimes an artifact reaches Zenodo immediately.
+
+Sometimes it takes weeks or months.
+
+Consequently:
+
+creation date, transmission date, GitHub date, and archival date can all be different.
+
+The archive therefore isn't simply a collection of files. It is a distributed body of material accumulated through an asynchronous workflow.
+
+---
+
+4. The project produces material continuously
+
+A rough daily production rate is currently something like:
+
+- 1–3 ten-second videos
+- 5–25 soundtracks/audio artifacts
+- 2–10 academic papers or manifestos
+- occasional podcasts;
+- podcast transcripts;
+- recordings/screen recordings of AI reading the podcasts;
+- plus photographs, screenshots, GitHub activity and other artifacts.
+
+That means potentially 8–38+ substantive new artifacts per day, before counting every derivative or incidental item.
+
+At that rate, the corpus can grow by hundreds to more than a thousand artifacts in a month.
+
+The problem therefore isn't merely preservation.
+
+It is retrieval, classification, deduplication and institutional memory.
+
+---
+
+5. The archival philosophy is extremely simple
+
+The project deliberately retains essentially everything whenever possible.
+
+The one normal reason for deletion is true binary duplication.
+
+If two files contain the exact same binary data—whether they are the same MP3, PDF, MP4, etc.—the redundant copy can be deleted.
+
+If the binary differs, it is retained.
+
+The surrounding metadata/context is not treated as a separate artifact that must independently survive every physical copy.
+
+The project's broader philosophy can therefore be summarized as:
+
+«Never delete information unnecessarily. Deduplicate identical binaries when necessary.»
+
+The project's “meta-content” is effectively the entire surrounding project: the documents, discussions, experiments, relationships, observations and history around the artifacts.
+
+---
+
+6. Even the archival failures are preserved
+
+The project has accumulated numerous screenshots of Zenodo errors and upload limitations—for example, messages indicating that a deposit is attempting to contain more artifacts than the platform permits.
+
+Those aren't substantive research results, but they are still retained.
+
+They document the history of the project's interaction with its archival infrastructure.
+
+This means the corpus contains not only research and creative output, but also evidence of the practical circumstances under which the archive itself was constructed.
+
+---
+
+7. Zenodo deposits are containers, not the fundamental unit of meaning
+
+The project often deliberately fills a Zenodo deposit to the platform's maximum practical artifact capacity—approximately 100 artifacts—before creating another deposit.
+
+Consequently:
+
+Individual artifact ≠ Zenodo deposit ≠ DOI ≠ entire corpus.
+
+A single DOI represents an archival container.
+
+The underlying corpus consists of the much larger collection of individual artifacts and their relationships.
+
+The future AI system should therefore be able to work at the artifact level, while still understanding which Zenodo deposit/DOI contains the artifact.
+
+---
+
+8. The future system should be an AI-readable corpus, not a giant index
+
+Instead of continually expanding one giant human-readable index, the project would benefit from a layered architecture:
+
+Machine-readable layer
+
+A structured representation of artifacts and their relationships.
+
+Human-readable layer
+
+A concise navigational overview of projects, major datasets, important DOIs and major research threads.
+
+AI retrieval layer
+
+A searchable representation of the actual corpus, allowing an AI to locate relevant primary material instead of merely searching titles.
+
+The goal would be questions such as:
+
+«“Find everything related to the crow experiments.”»
+
+«“Where is the Central Station piano material?”»
+
+«“Which material about Gemini eventually reached Zenodo?”»
+
+«“What exists in GitHub but hasn't been archived yet?”»
+
+«“Which documents contradict each other?”»
+
+The AI becomes a research interface to the corpus, rather than simply another place where documents are stored.
+
+---
+
+9. The Stichting is intended to solve the institutional problem
+
+There has been a plan for creating a Dutch Stichting/nonprofit foundation since approximately late June.
+
+There is already a large amount of material concerning:
+
+- formation of the foundation;
+- governance;
+- funding;
+- organizational structure;
+- staffing;
+- and its relationship to the project.
+
+The problem is not lack of planning.
+
+The foundation simply hasn't been fully executed yet.
+
+The growing corpus makes the need for the institution increasingly concrete.
+
+---
+
+10. The Stichting must be genuinely independent
+
+This is perhaps the most important governance principle discussed.
+
+The foundation must not depend on Attogram personally.
+
+The definitive tests are:
+
+«If Attogram is hit by a bus tomorrow, does the Stichting continue?»
+
+and:
+
+«If the Stichting decides Attogram should no longer work there, can it fire him and continue operating?»
+
+The answer must be yes.
+
+That means the Stichting—not Attogram personally—should control the organization's:
+
+- money;
+- infrastructure;
+- archives;
+- organizational accounts;
+- contracts;
+- institutional relationships;
+- and critical credentials.
+
+Knowledge also needs to be documented so that the organization doesn't depend on one person's memory.
+
+The goal is institutional continuity rather than personal continuity.
+
+---
+
+11. The motivation is deliberately practical
+
+The purpose isn't primarily:
+
+«“I want to personally administer a nonprofit because I want to do good.”»
+
+The much more practical motivation is:
+
+«“I want to build things. I do not want to spend my life doing bookkeeping, taxes, financial tracking, administrative paperwork and compliance.”»
+
+That means the Stichting should employ or contract the people whose job is to handle:
+
+- accounting;
+- payroll;
+- taxes;
+- administration;
+- legal matters;
+- compliance;
+- infrastructure;
+- archival management.
+
+The project's creative and research people can therefore concentrate on the actual work.
+
+The ideal outcome is almost:
+
+«Attogram doesn't know when the tax filing is due because somebody else is professionally responsible for knowing.»
+
+---
+
+12. Family and friends are part of the project
+
+The project is not simply an individual operation.
+
+Family members and many friends are involved.
+
+The long-term intention is that the core contributors can potentially be hired by the Stichting, either:
+
+- as employees;
+- part-time/full-time staff;
+- or contractors.
+
+However, participation and employment should remain distinct from governance.
+
+Someone can be:
+
+- a contributor;
+- an employee;
+- a contractor;
+- a volunteer;
+- a friend or family member;
+
+without those facts automatically determining their governance rights.
+
+This becomes especially important for transparency and conflict-of-interest management.
+
+---
+
+13. There is already an internal competency/payment structure
+
+The project has been operating as if this organizational system already exists.
+
+At the entry/leaf-node level, compensation begins at:
+
+€4.20 per week.
+
+The entry test consists of demonstrating an understanding of:
+
+1. What the Provos of the 1960s were;
+2. What Provo 42 is;
+3. Why 42?
+
+The applicant also produces a one-page A4 PDF demonstrating that understanding.
+
+Higher levels correspond to progressively greater responsibility and compensation.
+
+The system includes amounts such as:
+
+- €4.20/week;
+- €8.40/week;
+- €42/week;
+- €84/week;
+- and progressively higher levels;
+- eventually reaching approximately €8,400/month, representing a genuine senior-professional compensation level.
+
+The project is not necessarily permanently committed to 42 as the literal salary mathematics. Claude, for example, has criticized the system and suggested conventional amounts such as €1, €10, €100, €1,000, etc.
+
+That question remains open.
+
+---
+
+14. The board—not Attogram—ultimately decides compensation
+
+The important part is that the 42-based system is currently a proposal/framework, not unilateral authority.
+
+The intended process is approximately:
+
+«Contributor works for a period → contribution is documented → recommendation is made → independent officers review it → board decides compensation.»
+
+For example:
+
+«“Here are three months of work. Here's what we think this person should receive. You guys decide.”»
+
+The independent officers ultimately determine payment.
+
+That principle also needs to apply to Attogram.
+
+If Attogram eventually becomes a paid employee, he should not control his own compensation.
+
+---
+
+15. The foundation can be financed without making it dependent on its founder
+
+There is also the possibility of a founder's loan.
+
+The project has already spent approximately €3,000 worth of Bitcoin over roughly three months on project-related activity.
+
+The spending has been deliberately conservative, with roughly half of the available resources being held back for taxes, fines, fees and other obligations.
+
+The internal understanding has effectively been:
+
+«“These are founder/project advances that the future foundation may ultimately recognize.”»
+
+However, until the Stichting legally exists, those aren't automatically enforceable debts of the Stichting.
+
+Once the Stichting exists, the appropriate Dutch professionals can determine which historical expenditures should be treated as:
+
+- founder advances/loans;
+- reimbursable expenses;
+- assets transferred to the Stichting;
+- contributions/donations;
+- or personal expenses.
+
+There is also capacity for a founder's loan of roughly €10,000–€20,000 worth of Bitcoin, if appropriate.
+
+The important distinction is:
+
+providing startup capital ≠ owning or controlling the Stichting.
+
+The independent board should control the institution even if the founder has provided substantial initial financing.
+
+---
+
+16. The eventual staffing model is deliberately professional
+
+The likely organizational structure is something like:
+
+Core staff
+
+People with ongoing responsibilities.
+
+Professional contractors
+
+Specialists such as accountants, lawyers, developers, designers, archivists and specialized researchers.
+
+Project contributors
+
+People paid for specific projects or deliverables.
+
+Volunteers
+
+People participating without compensation.
+
+The key principle is:
+
+«The Stichting employs people to make the project sustainable, rather than making the project dependent on the founder doing everything.»
+
+---
+
+17. The physical-world projects follow the same philosophy
+
+One example discussed was temporary street/chalk art in Amsterdam.
+
+Potential locations include areas around:
+
+- Google offices;
+- OBA/Oosterdok;
+- Museumplein;
+- other public spaces.
+
+The fundamental requirement is:
+
+«Only use locations where the activity is actually permitted.»
+
+Temporary chalk being washable doesn't automatically make it legal.
+
+The correct approach is therefore to determine, for each specific square of public space:
+
+- who controls the location;
+- whether temporary chalk is permitted;
+- whether permission is required;
+- whether the municipality, property owner or another authority must approve it;
+- and what restrictions apply.
+
+The project is even considering cleaning the artwork afterward using water and a sponge/bucket so that the location is restored.
+
+The underlying principle remains the same:
+
+Do the experiment, but keep it legally contained.
+
+---
+
+18. The project also wants professional artists
+
+The street-art/chalk component isn't intended to be random sidewalk doodling.
+
+The goal is to find real artists capable of producing high-quality temporary public artwork, while ensuring:
+
+1. the location is legally authorized;
+2. the artist is genuinely capable;
+3. the artist can be compensated;
+4. ideally, compensation can be made in Bitcoin or otherwise accommodated through the project's financial structure.
+
+This potentially becomes another role for the future Stichting: contracting artists rather than having everything organized informally.
+
+---
+
+19. The Google/Gemini project illustrates why all of this matters
+
+One of the current projects concerns an incident involving a Gemini-generated recreation of a real-world event observed at Amsterdam Central Station.
+
+The original observation involved a mother and young son playing at the station piano.
+
+The project documented that the generated recreation changed the apparent racial/religious/cultural characteristics of the people depicted.
+
+The project's framing includes concepts such as:
+
+- “whitewashing”;
+- “Muslim erasure”;
+- representation failure;
+- AI safety constraints;
+- and the tension between safety mechanisms and faithful reconstruction of documented real-world events.
+
+The project has multiple layers:
+
+Meme/public-art layer
+
+Short, provocative formulations such as:
+
+«“Fuck Google”»
+
+and concepts around “whitewashing” or “Muslim erasure.”
+
+Serious documentation layer
+
+A much more formal collection of A4 documents explaining:
+
+- what happened;
+- what was actually observed;
+- what was generated;
+- what the system refused;
+- what the project believes the implications are;
+- and what positive and negative interpretations exist.
+
+The two layers aren't intended to be confused.
+
+One is public-facing cultural/political expression.
+
+The other is the documented research record.
+
+---
+
+20. The evidence is deliberately preserved
+
+The original Central Station material includes three recordings from the piano session.
+
+The project knows with confidence that:
+
+- one recording is Attogram's own playing;
+- one is an adult male playing a known song;
+- the adult male can be heard saying “Is that enough?” at the end, which provides a useful identifying clue for that recording;
+- the remaining recording is therefore logically very likely to be the child's performance.
+
+However, the project does not want to claim certainty where certainty doesn't exist.
+
+The videos deliberately point toward the ceiling rather than faces, so the visual material does not identify the people.
+
+The plan is therefore to preserve all three recordings rather than discard the uncertain one.
+
+The resulting evidence set may include:
+
+- three video recordings;
+- three corresponding audio tracks;
+- the generated Gemini video;
+- associated documentation;
+- multiple PDFs;
+- and eventually Zenodo archival deposits.
+
+This is a good example of why the corpus needs an AI retrieval system capable of handling uncertainty rather than simply producing a single “answer.”
+
+---
+
+21. Legal action is being considered
+
+The project is considering whether there may be grounds for legal action concerning the Gemini incident.
+
+The evidence has already been preserved in multiple locations.
+
+The project is considering approaches including:
+
+- consulting pro bono lawyers;
+- determining whether there is a viable legal theory;
+- evaluating whether litigation is realistic;
+- and potentially pursuing a smaller initial legal action rather than attempting a massive campaign against Google.
+
+The project has also begun contacting members of the Muslim community and some mosques.
+
+The intention is not merely to produce a meme, but to determine whether the incident has broader significance and whether affected communities or organizations see value in pursuing the issue.
+
+The project already distinguishes between:
+
+provocative public expression
+
+and
+
+formal evidence/legal documentation.
+
+---
+
+22. Multiple AI systems are deliberately used
+
+The project does not rely on one AI.
+
+It routinely uses approximately ten different AI systems, including:
+
+- ChatGPT;
+- Gemini;
+- Claude;
+- Kimi;
+- DeepSeek;
+- Mistral;
+- and others.
+
+This is deliberate.
+
+The project uses AI systems not only to generate content but also to criticize each other.
+
+An amusing example is that Gemini is used to help research criticism of Google/Gemini, while Claude is used to criticize organizational ideas such as the 42-based compensation system.
+
+The principle is essentially:
+
+«Use multiple independent AI systems and compare their outputs rather than treating one model as authoritative.»
+
+---
+
+23. The ultimate organizational problem is therefore the same as the archival problem
+
+There is a striking symmetry here.
+
+The project currently has:
+
+«thousands of artifacts distributed across many systems.»
+
+The future Stichting could accidentally become:
+
+«thousands of decisions distributed inside one person's head.»
+
+Both problems require the same solution:
+
+externalize knowledge.
+
+The corpus needs an institutional/machine-readable memory.
+
+The organization needs documented procedures, governance, financial records, succession plans and institutional knowledge.
+
+Neither should depend on Attogram's continued availability.
+
+---
+
+24. The ultimate objective
+
+The project is therefore evolving toward something substantially larger than a collection of experiments.
+
+The long-term architecture looks roughly like:
+
+Provo 42 / Rock Street
+
+→ independent Dutch Stichting
+→ independent board
+→ professional staff and contractors
+→ distributed research/creative community
+→ persistent archival infrastructure
+→ AI-assisted corpus retrieval
+→ continuously growing multimedia/research archive
+→ institutional continuity independent of its founder.
+
+And the central organizational test remains beautifully simple:
+
+«Attogram can disappear tomorrow, and the project continues.»
+
+Not because Attogram is unimportant.
+
+Precisely because the organization has become important enough that it must not depend on any one person.
