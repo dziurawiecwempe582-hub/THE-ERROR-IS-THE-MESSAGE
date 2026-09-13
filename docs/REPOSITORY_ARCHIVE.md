@@ -29,7 +29,12 @@ and updates of the archive and temporary upload branches.
 
 The exporter saves API metadata and text for issues, issue comments, pull
 requests, reviews, review comments and releases, plus the downloadable attachments
-it discovers. `archive/manifest.json` records counts, source URLs, checksums,
+it discovers. Releases include uploaded assets and GitHub's automatically generated
+**Source code (zip)** and **Source code (tar.gz)** downloads for each released tag.
+These generated archives are listed separately in the GitHub API and are preserved
+even when a release has no uploaded assets. Their download redirects are restricted
+to GitHub hosts, including the exact `codeload.github.com` hostname; API credentials
+are removed on cross-host redirects. `archive/manifest.json` records counts, source URLs, checksums,
 attachment parts and failures. Follow the exported index and manifest to locate
 the individual records and attachment files.
 

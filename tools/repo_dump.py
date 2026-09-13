@@ -34,7 +34,7 @@ def is_allowed_download(url):
         host = (parsed.hostname or "").lower()
         return (parsed.scheme == "https" and parsed.username is None
                 and parsed.password is None and parsed.port in (None, 443)
-                and (host in {"github.com", "api.github.com", "githubusercontent.com"} | GITHUB_ASSET_HOSTS
+                and (host in {"github.com", "api.github.com", "codeload.github.com", "githubusercontent.com"} | GITHUB_ASSET_HOSTS
                      or host.endswith(".githubusercontent.com")))
     except (ValueError, TypeError, AttributeError):
         return False
@@ -125,8 +125,12 @@ def extract_attachment_urls(value):
                 continue
             parsed = urlparse(url)
             host = (parsed.hostname or "").lower()
+            # Documentation can contain example URLs such as /assets/xxxx.
+            # Uploaded assets use UUIDs; named uploads use a numeric file ID.
+            # Keep examples in the raw text, but do not invent files for them.
             is_upload = (host == "github.com" and
-                         (parsed.path.startswith("/user-attachments/") or
+                         (re.fullmatch(r"/user-attachments/assets/[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}/?", parsed.path) or
+                          re.match(r"/user-attachments/files/[0-9]+/[^/]+", parsed.path) or
                           re.match(r"/[^/]+/[^/]+/(files|assets)/", parsed.path)))
             if is_allowed_download(url) and (is_upload or
                     (host.endswith(".githubusercontent.com") and not host.startswith("avatars"))):
@@ -281,7 +285,9 @@ class Archive:
         cached = self.cache.get(url)
         if cached and not verify_asset(self.output, cached):
             return cached
-        temporary = Path(tempfile.mkdtemp(prefix="repo-archive-"))
+        # Atomic publication cannot cross volumes (for example Windows TEMP on
+        # C: with the archive on D:). Stage beside the final assets instead.
+        temporary = Path(tempfile.mkdtemp(prefix=".repo-archive-", dir=safe_path(self.output, "assets")))
         try:
             chunks, total, digest = [], 0, hashlib.sha256()
             with self.client._open(url, "application/octet-stream") as response:
@@ -362,7 +368,24 @@ class Archive:
         releases = self.collect("/releases", "metadata/releases.json")
         self.counts["releases"] = len(releases)
         self.counts["tags"] = len(self.collect("/tags", "metadata/tags.json"))
+        self.counts["release_source_archives"] = 0
         for release in releases:
+            # GitHub's generated Source code (zip/tar.gz) downloads appear on
+            # release pages but are not returned by the release assets endpoint.
+            for archive_format in ("zipball", "tarball"):
+                url = release.get(archive_format + "_url")
+                if not url:
+                    continue  # Draft releases can have no source archive yet.
+                parsed = urlparse(url) if is_allowed_download(url) else None
+                expected_path = f"{self.prefix}/{archive_format}/"
+                if (parsed is not None and parsed.hostname == "api.github.com"
+                        and parsed.path.casefold().startswith(expected_path.casefold())
+                        and len(parsed.path) > len(expected_path)):
+                    self.urls.add(url)
+                    self.counts["release_source_archives"] += 1
+                else:
+                    self.failures.append({"kind": "asset", "error": "Unsupported release source archive URL",
+                                          "release_id": release.get("id"), "format": archive_format})
             assets = self.collect(f"/releases/{release['id']}/assets", f"metadata/releases/{release['id']}-assets.json")
             for asset in assets:
                 url = asset.get("browser_download_url", "")
@@ -439,6 +462,10 @@ def main():
     if not args.repo:
         parser.error("--repo is required unless --verify is used")
     manifest = Archive(args.repo, args.output, GitHubClient()).run()
+    for failure in manifest["failures"][:20]:
+        print(json.dumps(failure, ensure_ascii=False), file=sys.stderr)
+    if len(manifest["failures"]) > 20:
+        print("Additional failures are recorded in manifest.json", file=sys.stderr)
     print(json.dumps({"status": manifest["status"], "counts": manifest["counts"], "failures": len(manifest["failures"])}))
     return manifest["status"] != "complete"
 

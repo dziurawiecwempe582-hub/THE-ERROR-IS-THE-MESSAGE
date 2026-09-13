@@ -5,6 +5,7 @@ cannot reveal. No GitHub credentials or network access are required.
 """
 
 import hashlib
+import errno
 import importlib.util
 import io
 import json
@@ -44,6 +45,11 @@ class Response(io.BytesIO):
 
 
 class AttachmentExtractionTests(unittest.TestCase):
+    def test_example_asset_paths_are_not_uploaded_files(self):
+        valid = "https://github.com/user-attachments/assets/11111111-aaaa-bbbb-cccc-111111111111"
+        value = f"Example: `https://github.com/user-attachments/assets/xxxx`. Actual: {valid}"
+        self.assertEqual(dump.extract_attachment_urls(value), {valid})
+
     def test_nested_json_and_common_github_attachment_forms(self):
         urls = {
             "https://github.com/user-attachments/assets/11111111-aaaa-bbbb-cccc-111111111111",
@@ -121,6 +127,18 @@ class PaginationTests(unittest.TestCase):
 
 
 class RedirectTests(unittest.TestCase):
+    def test_release_source_redirect_is_allowed_without_forwarding_token(self):
+        request = Request(
+            "https://api.github.com/repos/owner/project/zipball/v1",
+            headers={"Authorization": "Bearer fake-test-token"},
+        )
+        target = "https://codeload.github.com/owner/project/legacy.zip/refs/tags/v1"
+        redirected = dump.SafeRedirectHandler().redirect_request(request, None, 302, "Found", {}, target)
+        self.assertEqual(redirected.full_url, target)
+        self.assertNotIn("authorization", {key.lower() for key, _ in redirected.header_items()})
+        self.assertFalse(dump.is_allowed_download(target.replace("codeload.github.com", "codeload.github.com.evil.example")))
+        self.assertFalse(dump.is_allowed_download(target.replace("https://", "http://")))
+
     def test_github_s3_attachment_redirect_is_allowed_without_credentials(self):
         request = Request("https://github.com/user-attachments/assets/example",
                           headers={"Authorization": "Bearer fake-test-token"})
@@ -386,6 +404,43 @@ class ArchiveEndToEndTests(unittest.TestCase):
         self.assertTrue(manifest["metadata"])
         self.assertEqual(dump.verify_archive(self.output), [])
 
+    def test_generated_release_archives_are_saved_without_uploaded_assets(self):
+        client = FixtureClient(populated=False)
+        urls = {f"https://api.github.com{client.prefix}/{kind}/v1" for kind in ("zipball", "tarball")}
+        client.pages[client.prefix + "/releases"] = [{
+            "id": 7, "tag_name": "v1", "body": "release notes",
+            "zipball_url": f"https://api.github.com{client.prefix}/zipball/v1",
+            "tarball_url": f"https://api.github.com{client.prefix}/tarball/v1",
+        }]
+        client.pages[client.prefix + "/releases/7/assets"] = []
+        manifest = self.run_archive(client)
+        self.assertEqual(manifest["status"], "complete")
+        self.assertEqual(manifest["counts"]["release_source_archives"], 2)
+        self.assertEqual({asset["url"] for asset in manifest["assets"]}, urls)
+        self.assertEqual(set(client.downloads), urls)
+        self.assertEqual(dump.verify_archive(self.output), [])
+
+    def test_failed_release_source_archive_makes_snapshot_partial(self):
+        client = FixtureClient(populated=False)
+        url = f"https://api.github.com{client.prefix}/zipball/v1"
+        client.pages[client.prefix + "/releases"] = [{"id": 7, "tag_name": "v1", "zipball_url": url}]
+        client.pages[client.prefix + "/releases/7/assets"] = []
+        client.asset_failures.add(url)
+        manifest = self.run_archive(client)
+        self.assertEqual(manifest["status"], "partial")
+        self.assertTrue(any(failure.get("url") == url for failure in manifest["failures"]))
+        self.assertTrue(dump.verify_archive(self.output))
+
+    def test_release_source_archive_must_belong_to_source_repository(self):
+        client = FixtureClient(populated=False)
+        url = "https://api.github.com/repos/different/project/zipball/v1"
+        client.pages[client.prefix + "/releases"] = [{"id": 7, "tag_name": "v1", "zipball_url": url}]
+        client.pages[client.prefix + "/releases/7/assets"] = []
+        manifest = self.run_archive(client)
+        self.assertEqual(manifest["status"], "partial")
+        self.assertNotIn(url, client.downloads)
+        self.assertTrue(any(failure.get("format") == "zipball" for failure in manifest["failures"]))
+
     def test_api_failure_is_not_mistaken_for_an_empty_successful_repository(self):
         client = FixtureClient(populated=False)
         client.api_failures.add(client.prefix + "/issues")
@@ -431,6 +486,29 @@ class ArchiveEndToEndTests(unittest.TestCase):
         self.assertEqual(manifest["status"], "partial")
         self.assertEqual(manifest["assets"], [])
         self.assertTrue(any("Truncated" in failure.get("error", "") for failure in manifest["failures"]))
+        self.assertEqual(list((self.output / "assets").glob(".repo-archive-*")), [])
+
+    def test_atomic_asset_publication_works_when_system_temp_is_on_another_volume(self):
+        client = FixtureClient(populated=False)
+        client.single[client.prefix]["description"] = client.review_attachment
+        real_replace = os.replace
+        replacements = []
+
+        def separate_volumes(source, destination):
+            # Model a system TEMP volume separate from the archive volume.
+            # The filesystem rejects cross-volume rename instead of copying.
+            source, destination = Path(source).resolve(), Path(destination).resolve()
+            replacements.append((source, destination))
+            if not source.is_relative_to(self.output.resolve()):
+                raise OSError(errno.EXDEV, "Invalid cross-device link")
+            return real_replace(source, destination)
+
+        with mock.patch.object(dump.os, "replace", side_effect=separate_volumes):
+            manifest = self.run_archive(client)
+        self.assertEqual(manifest["status"], "complete", manifest["failures"])
+        self.assertTrue(replacements)
+        self.assertEqual(dump.verify_archive(self.output), [])
+        self.assertEqual(list((self.output / "assets").glob(".repo-archive-*")), [])
 
 
 if __name__ == "__main__":
