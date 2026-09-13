@@ -1,0 +1,347 @@
+[
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346287",
+    "pull_request_review_id": 5190389172,
+    "id": 3999346287,
+    "node_id": "PRRC_kwDOUIkZ-s7uYS5v",
+    "diff_hunk": "@@ -0,0 +1,91 @@\n+name: Save repository history and media\n+\n+on:\n+  workflow_dispatch:\n+    inputs:\n+      source_repository:\n+        description: 'Repository to save (owner/name). Leave blank for this repository.'\n+        required: false\n+        type: string\n+\n+permissions:\n+  contents: write\n+  issues: read\n+  pull-requests: read\n+\n+concurrency:\n+  group: repository-archive\n+  cancel-in-progress: false\n+\n+jobs:\n+  archive:\n+    runs-on: ubuntu-latest\n+    timeout-minutes: 90\n+    env:\n+      ARCHIVE_BRANCH: repository-archive\n+      SOURCE_REPOSITORY: ${{ inputs.source_repository || vars.REPOSITORY_DUMP_SOURCE || github.repository }}\n+    steps:\n+      - name: Get the export tool\n+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4\n+        with:\n+          fetch-depth: 1\n+\n+      - name: Test the export tool\n+        run: python3 -m unittest discover -s tests -v\n+\n+      - name: Prepare archive branch\n+        shell: bash\n+        run: |\n+          archive_path=\"$RUNNER_TEMP/repository-archive\"\n+          if git ls-remote --exit-code --heads origin \"$ARCHIVE_BRANCH\" >/dev/null; then\n+            git fetch origin \"$ARCHIVE_BRANCH\"\n+            git worktree add --detach \"$archive_path\" FETCH_HEAD\n+          else\n+            git worktree add --detach \"$archive_path\" HEAD\n+            git -C \"$archive_path\" switch --orphan archive-root",
+    "path": ".github/workflows/repository-dump.yml",
+    "commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "original_commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "user": {
+      "login": "Copilot",
+      "id": 175728472,
+      "node_id": "BOT_kgDOCnlnWA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Copilot",
+      "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+      "followers_url": "https://api.github.com/users/Copilot/followers",
+      "following_url": "https://api.github.com/users/Copilot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Copilot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Copilot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Copilot/subscriptions",
+      "organizations_url": "https://api.github.com/users/Copilot/orgs",
+      "repos_url": "https://api.github.com/users/Copilot/repos",
+      "events_url": "https://api.github.com/users/Copilot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Copilot/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "When no archive branch exists, `git switch --orphan` leaves the checked-out source tree in the index/worktree. The publisher's first staged commit can therefore include every source file, so the supposedly dedicated archive branch duplicates the repository and can bypass the 40 MiB archive-file guard. Clear the orphan index/worktree before exporting.",
+    "created_at": "2026-09-13T10:10:41Z",
+    "updated_at": "2026-09-13T10:10:42Z",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346287",
+    "pull_request_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346287"
+      },
+      "html": {
+        "href": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346287"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346287/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 45,
+    "original_line": 45,
+    "side": "RIGHT",
+    "author_association": "NONE",
+    "original_position": 45,
+    "position": 45,
+    "subject_type": "line"
+  },
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346300",
+    "pull_request_review_id": 5190389172,
+    "id": 3999346300,
+    "node_id": "PRRC_kwDOUIkZ-s7uYS58",
+    "diff_hunk": "@@ -0,0 +1,478 @@\n+#!/usr/bin/env python3\n+\"\"\"Archive GitHub conversations and uploaded media. Python 3.10+, no dependencies.\"\"\"\n+from __future__ import annotations\n+\n+import argparse\n+import hashlib\n+import html\n+import json\n+import mimetypes\n+import os\n+from pathlib import Path\n+import re\n+import sys\n+import time\n+from datetime import datetime, timezone\n+from concurrent.futures import ThreadPoolExecutor, as_completed\n+from urllib.error import HTTPError, URLError\n+from urllib.parse import urljoin, urlsplit, urlunsplit\n+from urllib.request import Request, build_opener, HTTPRedirectHandler\n+\n+API = 'https://api.github.com'\n+BLOCK_SIZE = 1024 * 1024\n+PART_SIZE = 40 * BLOCK_SIZE  # GitHub's regular Git object limit is 100 MiB.\n+URL_RE = re.compile(r'https://[^\\s<>\"\\x27`]+')\n+\n+\n+def timestamp():\n+    return datetime.now(timezone.utc).isoformat()\n+\n+\n+def digest(path):\n+    with path.open('rb') as source:\n+        return hashlib.file_digest(source, 'sha256').hexdigest() if hasattr(hashlib, 'file_digest') else _hash_stream(source)\n+\n+\n+def _hash_stream(source):\n+    result = hashlib.sha256()\n+    for block in iter(lambda: source.read(BLOCK_SIZE), b''):\n+        result.update(block)\n+    return result.hexdigest()\n+\n+\n+def write_json(path, value):\n+    path.parent.mkdir(parents=True, exist_ok=True)\n+    temporary = path.with_name(path.name + '.tmp')\n+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\\n', encoding='utf-8')\n+    temporary.replace(path)\n+\n+\n+def safe_child(root, relative):\n+    root = root.resolve()\n+    path = (root / relative).resolve()\n+    if path == root or root not in path.parents:\n+        raise ValueError('Archive path escapes its destination')\n+    return path\n+\n+\n+def trusted_download(url):\n+    value = urlsplit(url)\n+    host = value.hostname or ''\n+    if value.scheme != 'https' or value.username or value.password or value.port not in (None, 443):\n+        return False\n+    return (host in {'github.com', 'api.github.com', 'codeload.github.com', 'github-cloud.s3.amazonaws.com'}\n+            or host.endswith('.githubusercontent.com')\n+            or bool(re.fullmatch(r'github-production-[a-z0-9-]+\\.s3\\.amazonaws\\.com', host)))\n+\n+\n+class SafeRedirect(HTTPRedirectHandler):\n+    def redirect_request(self, req, fp, code, msg, headers, newurl):\n+        newurl = urljoin(req.full_url, newurl)\n+        if not trusted_download(newurl):\n+            raise ValueError('Refusing a redirect outside GitHub file storage')\n+        redirected = super().redirect_request(req, fp, code, msg, headers, newurl)\n+        if urlsplit(newurl).netloc != urlsplit(req.full_url).netloc:\n+            redirected.remove_header('Authorization')\n+        return redirected\n+\n+\n+class GitHub:\n+    def __init__(self, token=None, opener=None, sleep=time.sleep):\n+        self.token = token\n+        self.opener = opener or build_opener(SafeRedirect())\n+        self.sleep = sleep\n+        self.requests = 0\n+\n+    def open(self, url, binary=False):\n+        if not trusted_download(url):\n+            raise ValueError('Refusing an untrusted download URL')\n+        parsed = urlsplit(url)\n+        # Source-archive endpoints redirect to a binary but require the JSON\n+        # media type at the API. octet-stream is specific to release assets.\n+        asset_api = parsed.hostname == 'api.github.com' and '/releases/assets/' in parsed.path\n+        accept = 'application/vnd.github+json'\n+        if binary:\n+            if asset_api:\n+                accept = 'application/octet-stream'\n+            elif parsed.hostname != 'api.github.com':\n+                accept = '*/*'\n+        headers = {'User-Agent': 'repository-dump/1.0',\n+                   'Accept': accept,\n+                   'X-GitHub-Api-Version': '2022-11-28'}\n+        if self.token and parsed.hostname == 'api.github.com':\n+            headers['Authorization'] = 'Bearer ' + self.token\n+        for attempt in range(4):\n+            try:\n+                self.requests += 1\n+                return self.opener.open(Request(url, headers=headers), timeout=60)\n+            except HTTPError as error:\n+                retryable = error.code in (429, 500, 502, 503, 504) or (error.code == 403 and error.headers.get('Retry-After'))\n+                if not retryable or attempt == 3:\n+                    raise RuntimeError(f'GitHub returned HTTP {error.code}; check access and rate limits') from None\n+                delay = error.headers.get('Retry-After', str(2 ** attempt))\n+                try:\n+                    delay = float(delay)\n+                except ValueError:\n+                    delay = 2 ** attempt\n+                if delay > 60:\n+                    raise RuntimeError('GitHub requested a long rate-limit wait; rerun later') from None\n+                self.sleep(max(0, delay))\n+            except (URLError, TimeoutError):\n+                if attempt == 3:\n+                    raise RuntimeError('Network request failed after four attempts') from None\n+                self.sleep(2 ** attempt)\n+\n+    def one(self, path):\n+        with self.open(API + path) as response:\n+            return json.load(response)\n+\n+    def pages(self, path):\n+        url = API + path + ('&' if '?' in path else '?') + 'per_page=100'\n+        seen = set()\n+        result = []\n+        while url:\n+            if url in seen or urlsplit(url).netloc != 'api.github.com':\n+                raise RuntimeError('Invalid GitHub pagination link')\n+            seen.add(url)\n+            with self.open(url) as response:\n+                page = json.load(response)\n+                if not isinstance(page, list):\n+                    raise RuntimeError('GitHub returned an unexpected list response')\n+                result.extend(page)\n+                link = response.headers.get('Link', '')\n+            match = re.search(r'<([^>]+)>;\\s*rel=\"next\"', link)\n+            url = match.group(1) if match else None\n+        return result\n+\n+\n+def uploaded_urls(text):\n+    \"\"\"GitHub uploads in Markdown, HTML, bare video URLs, and reference links.\"\"\"\n+    found = set()\n+    for match in URL_RE.finditer(html.unescape(text or '')):\n+        url = match.group().rstrip('.,;:!?')\n+        # Markdown closing parentheses are not part of a bare GitHub upload URL.\n+        while url.endswith(')') and url.count(')') > url.count('('):\n+            url = url[:-1]\n+        url = url.rstrip(']')\n+        try:\n+            parsed = urlsplit(url)\n+            if not trusted_download(url):\n+                continue\n+        except ValueError:\n+            continue\n+        host = parsed.hostname or ''\n+        uuid = r'[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}'\n+        is_upload = ((host == 'github.com' and\n+                      (re.fullmatch(r'/user-attachments/assets/' + uuid, parsed.path) or\n+                       re.match(r'^/user-attachments/files/[0-9]+/[^/]+', parsed.path) or\n+                       re.match(r'^/[^/]+/[^/]+/files/[0-9]+/[^/]+', parsed.path) or\n+                       re.fullmatch(r'/[^/]+/[^/]+/assets/[0-9]+/' + uuid, parsed.path)))\n+                     or host in {'user-images.githubusercontent.com', 'private-user-images.githubusercontent.com', 'secured-user-images.githubusercontent.com'}\n+                     or host.startswith('github-production-user-asset-'))",
+    "path": "tools/repository_dump.py",
+    "commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "original_commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "user": {
+      "login": "Copilot",
+      "id": 175728472,
+      "node_id": "BOT_kgDOCnlnWA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Copilot",
+      "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+      "followers_url": "https://api.github.com/users/Copilot/followers",
+      "following_url": "https://api.github.com/users/Copilot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Copilot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Copilot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Copilot/subscriptions",
+      "organizations_url": "https://api.github.com/users/Copilot/orgs",
+      "repos_url": "https://api.github.com/users/Copilot/repos",
+      "events_url": "https://api.github.com/users/Copilot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Copilot/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Any URL whose host starts with `github-production-user-asset-` is treated as an upload, while `trusted_download` accepts any matching S3 bucket. A repository commenter can therefore make the action fetch an attacker-controlled public object instead of a GitHub upload. Only accept GitHub upload URLs initially; keep the S3 pattern for redirects from GitHub storage (or otherwise bind the redirect origin).",
+    "created_at": "2026-09-13T10:10:41Z",
+    "updated_at": "2026-09-13T10:10:42Z",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346300",
+    "pull_request_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346300"
+      },
+      "html": {
+        "href": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346300"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346300/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 170,
+    "original_start_line": 170,
+    "start_side": "RIGHT",
+    "line": 171,
+    "original_line": 171,
+    "side": "RIGHT",
+    "author_association": "NONE",
+    "original_position": 171,
+    "position": 171,
+    "subject_type": "line"
+  },
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346311",
+    "pull_request_review_id": 5190389172,
+    "id": 3999346311,
+    "node_id": "PRRC_kwDOUIkZ-s7uYS6H",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+name: Test repository export tool\n+on:\n+  pull_request:\n+    paths:\n+      - 'tools/repository_dump.py'\n+      - 'tests/test_repository_dump.py'\n+      - '.github/workflows/*repository-dump.yml'\n+  push:\n+    paths:\n+      - 'tools/repository_dump.py'\n+      - 'tests/test_repository_dump.py'\n+      - '.github/workflows/*repository-dump.yml'",
+    "path": ".github/workflows/test-repository-dump.yml",
+    "commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "original_commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "user": {
+      "login": "Copilot",
+      "id": 175728472,
+      "node_id": "BOT_kgDOCnlnWA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Copilot",
+      "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+      "followers_url": "https://api.github.com/users/Copilot/followers",
+      "following_url": "https://api.github.com/users/Copilot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Copilot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Copilot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Copilot/subscriptions",
+      "organizations_url": "https://api.github.com/users/Copilot/orgs",
+      "repos_url": "https://api.github.com/users/Copilot/repos",
+      "events_url": "https://api.github.com/users/Copilot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Copilot/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "This workflow is the matrix that runs the Python test suite on both Linux and Windows, but neither the `pull_request` nor `push` path filters includes `tools/publish_archive.py` or `tests/test_publish_archive.py`. A publisher-only change can therefore merge without running the tests that cover it; add both files to each filter.",
+    "created_at": "2026-09-13T10:10:41Z",
+    "updated_at": "2026-09-13T10:10:42Z",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346311",
+    "pull_request_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346311"
+      },
+      "html": {
+        "href": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346311"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346311/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 3,
+    "original_start_line": 3,
+    "start_side": "RIGHT",
+    "line": 12,
+    "original_line": 12,
+    "side": "RIGHT",
+    "author_association": "NONE",
+    "original_position": 12,
+    "position": 12,
+    "subject_type": "line"
+  },
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346320",
+    "pull_request_review_id": 5190389172,
+    "id": 3999346320,
+    "node_id": "PRRC_kwDOUIkZ-s7uYS6Q",
+    "diff_hunk": "@@ -0,0 +1,77 @@\n+\"\"\"Publish an archive in small, retryable pushes with an explicit pending state.\"\"\"\n+import argparse\n+import json\n+import os\n+from pathlib import Path\n+import subprocess\n+import time\n+\n+\n+def publish(root, branch='repository-archive', batch_bytes=64 * 1024 * 1024, sleep=time.sleep):\n+    root = Path(root).resolve()\n+    if branch != 'repository-archive':\n+        raise ValueError('Only the dedicated repository-archive branch may be published')\n+\n+    def git(*args, capture=False, check=True):\n+        return subprocess.run(['git', '-C', str(root), *args], check=check,\n+                              stdout=subprocess.PIPE if capture else None)\n+\n+    def save(paths, message):\n+        for offset in range(0, len(paths), 100):\n+            git('add', '--', *paths[offset:offset + 100])\n+        changed = git('diff', '--cached', '--quiet', check=False).returncode\n+        if changed == 0:\n+            return\n+        if changed != 1:\n+            raise RuntimeError('Could not inspect staged archive changes')\n+        git('commit', '-m', message)\n+        for attempt in range(3):\n+            result = git('push', 'origin', f'HEAD:refs/heads/{branch}', check=False)\n+            if result.returncode == 0:\n+                return\n+            if attempt < 2:\n+                sleep(2 ** (attempt + 1))\n+        raise RuntimeError('Archive push failed after three attempts; see Git output')\n+\n+    report_path = root / 'archive/report.json'\n+    readme_path = root / 'archive/README.md'\n+    final_report, final_readme = report_path.read_bytes(), readme_path.read_bytes()\n+    report = json.loads(final_report)\n+    report.update(complete=False, publication_in_progress=True)\n+    report_path.write_text(json.dumps(report, indent=2) + '\\n', encoding='utf-8')\n+    readme_path.write_text('# Archive publication in progress\\n\\n'\n+                          'This branch is incomplete until the final publication commit. '\n+                          'Check the Actions run for its status.\\n', encoding='utf-8')\n+    save(['archive/report.json', 'archive/README.md'], 'Mark archive publication in progress')\n+\n+    changed = git('ls-files', '--others', '--modified', '--deleted',\n+                  '--exclude-standard', '-z', '--', 'archive', capture=True).stdout\n+    paths = sorted(set(os.fsdecode(p) for p in changed.split(b'\\0') if p))\n+    batch, weight = [], 0\n+    for relative in paths:\n+        if relative in ('archive/report.json', 'archive/README.md', 'archive/checksums.json'):\n+            continue\n+        path = root / relative\n+        if path.is_symlink() or not path.resolve().is_relative_to(root / 'archive'):\n+            raise ValueError('Archive contains an unsafe path')\n+        size = path.stat().st_size if path.exists() else 0\n+        if size > 40 * 1024 * 1024:\n+            raise ValueError('Unexpected oversized archive file; export must split large assets')",
+    "path": "tools/publish_archive.py",
+    "commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "original_commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "user": {
+      "login": "Copilot",
+      "id": 175728472,
+      "node_id": "BOT_kgDOCnlnWA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Copilot",
+      "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+      "followers_url": "https://api.github.com/users/Copilot/followers",
+      "following_url": "https://api.github.com/users/Copilot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Copilot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Copilot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Copilot/subscriptions",
+      "organizations_url": "https://api.github.com/users/Copilot/orgs",
+      "repos_url": "https://api.github.com/users/Copilot/repos",
+      "events_url": "https://api.github.com/users/Copilot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Copilot/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Only downloaded media is split by `repository_dump.py`; generated metadata such as `issue-comments.json`, `issue-index.json`, and per-PR `files.json` is written as one file. A repository with enough discussion or patch data can exceed 40 MiB, causing this guard to abort publication even though the export is otherwise complete, contrary to the documented large-file handling. Chunk generated metadata as well (or use another size-safe representation) before enforcing the archive file limit.",
+    "created_at": "2026-09-13T10:10:42Z",
+    "updated_at": "2026-09-13T10:10:42Z",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346320",
+    "pull_request_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346320"
+      },
+      "html": {
+        "href": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346320"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346320/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 57,
+    "original_start_line": 57,
+    "start_side": "RIGHT",
+    "line": 59,
+    "original_line": 59,
+    "side": "RIGHT",
+    "author_association": "NONE",
+    "original_position": 59,
+    "position": 59,
+    "subject_type": "line"
+  },
+  {
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346322",
+    "pull_request_review_id": 5190389172,
+    "id": 3999346322,
+    "node_id": "PRRC_kwDOUIkZ-s7uYS6S",
+    "diff_hunk": "@@ -0,0 +1,478 @@\n+#!/usr/bin/env python3\n+\"\"\"Archive GitHub conversations and uploaded media. Python 3.10+, no dependencies.\"\"\"\n+from __future__ import annotations\n+\n+import argparse\n+import hashlib\n+import html\n+import json\n+import mimetypes\n+import os\n+from pathlib import Path\n+import re\n+import sys\n+import time\n+from datetime import datetime, timezone\n+from concurrent.futures import ThreadPoolExecutor, as_completed\n+from urllib.error import HTTPError, URLError\n+from urllib.parse import urljoin, urlsplit, urlunsplit\n+from urllib.request import Request, build_opener, HTTPRedirectHandler\n+\n+API = 'https://api.github.com'\n+BLOCK_SIZE = 1024 * 1024\n+PART_SIZE = 40 * BLOCK_SIZE  # GitHub's regular Git object limit is 100 MiB.\n+URL_RE = re.compile(r'https://[^\\s<>\"\\x27`]+')\n+\n+\n+def timestamp():\n+    return datetime.now(timezone.utc).isoformat()\n+\n+\n+def digest(path):\n+    with path.open('rb') as source:\n+        return hashlib.file_digest(source, 'sha256').hexdigest() if hasattr(hashlib, 'file_digest') else _hash_stream(source)\n+\n+\n+def _hash_stream(source):\n+    result = hashlib.sha256()\n+    for block in iter(lambda: source.read(BLOCK_SIZE), b''):\n+        result.update(block)\n+    return result.hexdigest()\n+\n+\n+def write_json(path, value):\n+    path.parent.mkdir(parents=True, exist_ok=True)\n+    temporary = path.with_name(path.name + '.tmp')\n+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\\n', encoding='utf-8')\n+    temporary.replace(path)\n+\n+\n+def safe_child(root, relative):\n+    root = root.resolve()\n+    path = (root / relative).resolve()\n+    if path == root or root not in path.parents:\n+        raise ValueError('Archive path escapes its destination')\n+    return path\n+\n+\n+def trusted_download(url):\n+    value = urlsplit(url)\n+    host = value.hostname or ''\n+    if value.scheme != 'https' or value.username or value.password or value.port not in (None, 443):\n+        return False\n+    return (host in {'github.com', 'api.github.com', 'codeload.github.com', 'github-cloud.s3.amazonaws.com'}\n+            or host.endswith('.githubusercontent.com')\n+            or bool(re.fullmatch(r'github-production-[a-z0-9-]+\\.s3\\.amazonaws\\.com', host)))\n+\n+\n+class SafeRedirect(HTTPRedirectHandler):\n+    def redirect_request(self, req, fp, code, msg, headers, newurl):\n+        newurl = urljoin(req.full_url, newurl)\n+        if not trusted_download(newurl):\n+            raise ValueError('Refusing a redirect outside GitHub file storage')\n+        redirected = super().redirect_request(req, fp, code, msg, headers, newurl)\n+        if urlsplit(newurl).netloc != urlsplit(req.full_url).netloc:\n+            redirected.remove_header('Authorization')\n+        return redirected\n+\n+\n+class GitHub:\n+    def __init__(self, token=None, opener=None, sleep=time.sleep):\n+        self.token = token\n+        self.opener = opener or build_opener(SafeRedirect())\n+        self.sleep = sleep\n+        self.requests = 0\n+\n+    def open(self, url, binary=False):\n+        if not trusted_download(url):\n+            raise ValueError('Refusing an untrusted download URL')\n+        parsed = urlsplit(url)\n+        # Source-archive endpoints redirect to a binary but require the JSON\n+        # media type at the API. octet-stream is specific to release assets.\n+        asset_api = parsed.hostname == 'api.github.com' and '/releases/assets/' in parsed.path\n+        accept = 'application/vnd.github+json'\n+        if binary:\n+            if asset_api:\n+                accept = 'application/octet-stream'\n+            elif parsed.hostname != 'api.github.com':\n+                accept = '*/*'\n+        headers = {'User-Agent': 'repository-dump/1.0',\n+                   'Accept': accept,\n+                   'X-GitHub-Api-Version': '2022-11-28'}\n+        if self.token and parsed.hostname == 'api.github.com':\n+            headers['Authorization'] = 'Bearer ' + self.token\n+        for attempt in range(4):\n+            try:\n+                self.requests += 1\n+                return self.opener.open(Request(url, headers=headers), timeout=60)\n+            except HTTPError as error:\n+                retryable = error.code in (429, 500, 502, 503, 504) or (error.code == 403 and error.headers.get('Retry-After'))\n+                if not retryable or attempt == 3:\n+                    raise RuntimeError(f'GitHub returned HTTP {error.code}; check access and rate limits') from None\n+                delay = error.headers.get('Retry-After', str(2 ** attempt))\n+                try:\n+                    delay = float(delay)\n+                except ValueError:\n+                    delay = 2 ** attempt\n+                if delay > 60:\n+                    raise RuntimeError('GitHub requested a long rate-limit wait; rerun later') from None\n+                self.sleep(max(0, delay))\n+            except (URLError, TimeoutError):\n+                if attempt == 3:\n+                    raise RuntimeError('Network request failed after four attempts') from None\n+                self.sleep(2 ** attempt)\n+\n+    def one(self, path):\n+        with self.open(API + path) as response:\n+            return json.load(response)\n+\n+    def pages(self, path):\n+        url = API + path + ('&' if '?' in path else '?') + 'per_page=100'\n+        seen = set()\n+        result = []\n+        while url:\n+            if url in seen or urlsplit(url).netloc != 'api.github.com':\n+                raise RuntimeError('Invalid GitHub pagination link')\n+            seen.add(url)\n+            with self.open(url) as response:\n+                page = json.load(response)\n+                if not isinstance(page, list):\n+                    raise RuntimeError('GitHub returned an unexpected list response')\n+                result.extend(page)\n+                link = response.headers.get('Link', '')\n+            match = re.search(r'<([^>]+)>;\\s*rel=\"next\"', link)\n+            url = match.group(1) if match else None\n+        return result\n+\n+\n+def uploaded_urls(text):\n+    \"\"\"GitHub uploads in Markdown, HTML, bare video URLs, and reference links.\"\"\"\n+    found = set()\n+    for match in URL_RE.finditer(html.unescape(text or '')):\n+        url = match.group().rstrip('.,;:!?')\n+        # Markdown closing parentheses are not part of a bare GitHub upload URL.\n+        while url.endswith(')') and url.count(')') > url.count('('):\n+            url = url[:-1]\n+        url = url.rstrip(']')\n+        try:\n+            parsed = urlsplit(url)\n+            if not trusted_download(url):\n+                continue\n+        except ValueError:\n+            continue\n+        host = parsed.hostname or ''\n+        uuid = r'[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}'\n+        is_upload = ((host == 'github.com' and\n+                      (re.fullmatch(r'/user-attachments/assets/' + uuid, parsed.path) or\n+                       re.match(r'^/user-attachments/files/[0-9]+/[^/]+', parsed.path) or\n+                       re.match(r'^/[^/]+/[^/]+/files/[0-9]+/[^/]+', parsed.path) or\n+                       re.fullmatch(r'/[^/]+/[^/]+/assets/[0-9]+/' + uuid, parsed.path)))\n+                     or host in {'user-images.githubusercontent.com', 'private-user-images.githubusercontent.com', 'secured-user-images.githubusercontent.com'}\n+                     or host.startswith('github-production-user-asset-'))\n+        if is_upload and trusted_download(url):\n+            found.add(urlunsplit(parsed._replace(fragment='')))\n+    return sorted(found)\n+\n+\n+def text_fields(value):\n+    if isinstance(value, dict):\n+        for key, child in value.items():\n+            if key in {'body', 'description'} and isinstance(child, str):\n+                yield child\n+            elif isinstance(child, (dict, list)):\n+                yield from text_fields(child)\n+    elif isinstance(value, list):\n+        for child in value:\n+            yield from text_fields(child)\n+\n+\n+class Archive:\n+    def __init__(self, github, repository, output, workers=4):\n+        if (not re.fullmatch(r'[A-Za-z0-9-]+/[A-Za-z0-9_.-]+', repository)\n+                or repository.split('/')[-1] in {'.', '..'}):\n+            raise ValueError('Repository must be owner/name')\n+        self.github, self.repository, self.output = github, repository, Path(output)\n+        self.workers = workers\n+        self.prefix = '/repos/' + repository\n+        self.output.mkdir(parents=True, exist_ok=True)\n+        if any(path.is_symlink() for path in self.output.rglob('*')):\n+            raise ValueError('Archive output contains symlinks; use a dedicated directory without symlinks')\n+        self.media = {}\n+        previous = self.output / 'assets.json'\n+        self.previous = json.loads(previous.read_text(encoding='utf-8')) if previous.exists() else {}\n+        self.report = {'repository': repository, 'started_at': timestamp(), 'complete': False,\n+                       'errors': [], 'counts': {}, 'scope': 'Current accessible GitHub API records, including open and closed issues and PRs, reviews, release assets, and GitHub-hosted uploads. Deleted records and historical edits are not exposed by these APIs.'}\n+\n+    def cached(self, record):\n+        try:\n+            return bool(record.get('parts')) and all(\n+                (path := safe_child(self.output, part['path'])).is_file()\n+                and path.stat().st_size == part['bytes'] and digest(path) == part['sha256']\n+                for part in record['parts'])\n+        except (OSError, ValueError, KeyError):\n+            return False\n+\n+    def download(self, url, name=None, expected_size=None, version=None):\n+        if url in self.media:\n+            return\n+        previous = self.previous.get(url, {})\n+        if previous.get('status') == 'saved' and previous.get('version') == version and self.cached(previous) and (expected_size is None or previous.get('bytes') == expected_size):\n+            self.media[url] = previous\n+            return\n+        record = {'source': url, 'status': 'failed', 'parts': [], 'version': version}\n+        temporary = self.output / 'assets' / (hashlib.sha256(url.encode()).hexdigest() + '.download')\n+        temporary.parent.mkdir(parents=True, exist_ok=True)\n+        try:\n+            total = 0\n+            full_hash = hashlib.sha256()\n+            with self.github.open(url, binary=True) as response:\n+                content_type = response.headers.get('Content-Type', 'application/octet-stream').split(';')[0]\n+                if (content_type == 'text/html' and expected_size is None\n+                        and 'attachment' not in response.headers.get('Content-Disposition', '').lower()\n+                        and not urlsplit(url).path.lower().endswith(('.html', '.htm'))):\n+                    raise ValueError('Expected an uploaded file, received an HTML page')\n+                with temporary.open('wb') as target:\n+                    while block := response.read(BLOCK_SIZE):\n+                        target.write(block)\n+                        full_hash.update(block)\n+                        total += len(block)\n+                declared = response.headers.get('Content-Length')\n+                if declared is not None and total != int(declared):\n+                    raise ValueError('Download is truncated (Content-Length mismatch)')\n+                if expected_size is not None and total != expected_size:\n+                    raise ValueError('Download size differs from release metadata')\n+                disposition = response.headers.get('Content-Disposition', '')\n+            remote_name = name or (re.search(r'filename=\"?([^\";]+)', disposition).group(1) if re.search(r'filename=\"?([^\";]+)', disposition) else Path(urlsplit(url).path).name)\n+            if not Path(remote_name).suffix:\n+                remote_name += mimetypes.guess_extension(content_type) or '.bin'\n+            extension = Path(remote_name).suffix.lower()\n+            if not re.fullmatch(r'\\.[a-z0-9]{1,10}', extension):\n+                extension = mimetypes.guess_extension(content_type) or '.bin'\n+            extension = {'.jpe': '.jpg', '.jpeg': '.jpg'}.get(extension, extension)\n+            stem = full_hash.hexdigest()\n+            if total <= PART_SIZE:\n+                destination = temporary.parent / (stem + extension)\n+                temporary.replace(destination)\n+                record['parts'] = [{'path': destination.relative_to(self.output).as_posix(), 'bytes': total, 'sha256': stem}]\n+            else:\n+                with temporary.open('rb') as source:\n+                    part_number = 0\n+                    while part := source.read(PART_SIZE):\n+                        part_number += 1\n+                        destination = temporary.parent / f'{stem}{extension}.part{part_number:04d}'\n+                        destination.write_bytes(part)\n+                        record['parts'].append({'path': destination.relative_to(self.output).as_posix(), 'bytes': len(part), 'sha256': hashlib.sha256(part).hexdigest()})\n+                temporary.unlink()\n+            record.update(status='saved', name=remote_name, bytes=total, sha256=stem, content_type=content_type)\n+        except Exception as error:\n+            temporary.unlink(missing_ok=True)\n+            record['error'] = str(error)\n+            self.report['errors'].append({'source': url, 'error': str(error)})\n+        self.media[url] = record\n+\n+    def localize(self, body):\n+        body = body or ''\n+        for url in sorted(self.media, key=len, reverse=True):\n+            asset = self.media[url]\n+            if asset['status'] == 'saved' and len(asset['parts']) == 1:\n+                local = '../../' + asset['parts'][0]['path']\n+                link = '[Open saved attachment](' + local + ')'\n+                # Relative paths are not autolinked by Markdown renderers.\n+                # Preserve clickable bare video/audio URLs and <autolinks>.\n+                body = re.sub(r'(?m)^[ \\t]*' + re.escape(url) + r'[ \\t]*\\r?$',\n+                              lambda match: link, body)\n+                body = body.replace('<' + url + '>', link)\n+                body = body.replace(url, local)",
+    "path": "tools/repository_dump.py",
+    "commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "original_commit_id": "f61d55b8a3cd7783cb2266e99da539cdb5418467",
+    "user": {
+      "login": "Copilot",
+      "id": 175728472,
+      "node_id": "BOT_kgDOCnlnWA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Copilot",
+      "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+      "followers_url": "https://api.github.com/users/Copilot/followers",
+      "following_url": "https://api.github.com/users/Copilot/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Copilot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Copilot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Copilot/subscriptions",
+      "organizations_url": "https://api.github.com/users/Copilot/orgs",
+      "repos_url": "https://api.github.com/users/Copilot/repos",
+      "events_url": "https://api.github.com/users/Copilot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Copilot/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "The final replacement turns an inline bare upload such as `See <upload-url> for details` into plain `See ../../assets/<hash>` text. Relative paths are not autolinked by Markdown, so these supported bare media references are not clickable in the archived page; only whole-line URLs and angle autolinks are converted to links. Preserve the existing Markdown/HTML cases while wrapping remaining bare occurrences in a local Markdown link.",
+    "created_at": "2026-09-13T10:10:42Z",
+    "updated_at": "2026-09-13T10:10:42Z",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346322",
+    "pull_request_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346322"
+      },
+      "html": {
+        "href": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/pull/69#discussion_r3999346322"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/69"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/pulls/comments/3999346322/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 282,
+    "original_start_line": 282,
+    "start_side": "RIGHT",
+    "line": 285,
+    "original_line": 285,
+    "side": "RIGHT",
+    "author_association": "NONE",
+    "original_position": 285,
+    "position": 285,
+    "subject_type": "line"
+  }
+]

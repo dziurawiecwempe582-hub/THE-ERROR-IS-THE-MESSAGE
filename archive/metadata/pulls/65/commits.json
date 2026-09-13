@@ -1,0 +1,822 @@
+[
+  {
+    "sha": "983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+    "node_id": "C_kwDOUY1WENoAKDk4M2U3NzMyYjE1OWJiNjg1ZDE3YzJmZWRhNmU2ZTVjMjQ4OGRiYzE",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:11:10Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:14:09Z"
+      },
+      "message": "Add public repository archive with verified media and mobile workflow",
+      "tree": {
+        "sha": "139232906477bd370bc9ef8f16823e3d8ec037e2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/139232906477bd370bc9ef8f16823e3d8ec037e2"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/983e7732b159bb685d17c2feda6e6e5c2488dbc1/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2"
+      }
+    ]
+  },
+  {
+    "sha": "daa7e63690749a267d1b5494b8e698816def0187",
+    "node_id": "C_kwDOUY1WENoAKGRhYTdlNjM2OTA3NDlhMjY3ZDFiNTQ5NGI4ZTY5ODgxNmRlZjAxODc",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:17:58Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:17:58Z"
+      },
+      "message": "Preserve large media in verifiable chunks with restoration",
+      "tree": {
+        "sha": "f6e934e86394b4c73881d85fdf0506260e63d944",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/f6e934e86394b4c73881d85fdf0506260e63d944"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/daa7e63690749a267d1b5494b8e698816def0187",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/daa7e63690749a267d1b5494b8e698816def0187",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/daa7e63690749a267d1b5494b8e698816def0187",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/daa7e63690749a267d1b5494b8e698816def0187/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/983e7732b159bb685d17c2feda6e6e5c2488dbc1",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/983e7732b159bb685d17c2feda6e6e5c2488dbc1"
+      }
+    ]
+  },
+  {
+    "sha": "fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+    "node_id": "C_kwDOUY1WENoAKGZjNDgzNmNmODI0MDNjM2YwMTJkMGI5YzU1OWU2Y2RhN2MyZDYyMTI",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:24:11Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:24:11Z"
+      },
+      "message": "Checkpoint attachment recovery during long archives",
+      "tree": {
+        "sha": "e7767b5508d5a107cf92f2001cdaa6a49c6100e6",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/e7767b5508d5a107cf92f2001cdaa6a49c6100e6"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fc4836cf82403c3f012d0b9c559e6cda7c2d6212/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "daa7e63690749a267d1b5494b8e698816def0187",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/daa7e63690749a267d1b5494b8e698816def0187",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/daa7e63690749a267d1b5494b8e698816def0187"
+      }
+    ]
+  },
+  {
+    "sha": "f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+    "node_id": "C_kwDOUY1WENoAKGY4YjVjMzlmNjdkNGRhZmQ0YWNiZWJlNGJkMzM4NzUwNDFmNDU5YTA",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:39:09Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:39:09Z"
+      },
+      "message": "Limit uploaded-media discovery to conversation text",
+      "tree": {
+        "sha": "11af2c8b5f12f0272df2f11552bcd7c57897717b",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/11af2c8b5f12f0272df2f11552bcd7c57897717b"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f8b5c39f67d4dafd4acbebe4bd33875041f459a0/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fc4836cf82403c3f012d0b9c559e6cda7c2d6212",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/fc4836cf82403c3f012d0b9c559e6cda7c2d6212"
+      }
+    ]
+  },
+  {
+    "sha": "fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+    "node_id": "C_kwDOUY1WENoAKGZiYjRhYTRkNWY1N2JiZmI3ZjBjYWQyMDI5ZDI1N2U5ZjY4YjNlM2Y",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:43:46Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:43:46Z"
+      },
+      "message": "Preserve exact text attachment bytes across Git checkouts",
+      "tree": {
+        "sha": "e91051bb0b2b7de3ba3233c7c94ef9b3b93558fc",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/e91051bb0b2b7de3ba3233c7c94ef9b3b93558fc"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f8b5c39f67d4dafd4acbebe4bd33875041f459a0",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f8b5c39f67d4dafd4acbebe4bd33875041f459a0"
+      }
+    ]
+  },
+  {
+    "sha": "87e510dbc23687990165ad3b558e30019a65193a",
+    "node_id": "C_kwDOUY1WENoAKDg3ZTUxMGRiYzIzNjg3OTkwMTY1YWQzYjU1OGUzMDAxOWE2NTE5M2E",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:49:31Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:49:31Z"
+      },
+      "message": "Distinguish explicit example links from uploaded media",
+      "tree": {
+        "sha": "3a8bd2f8684aa256c7a64fa26494efab1f91f505",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/3a8bd2f8684aa256c7a64fa26494efab1f91f505"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/87e510dbc23687990165ad3b558e30019a65193a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/87e510dbc23687990165ad3b558e30019a65193a",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/87e510dbc23687990165ad3b558e30019a65193a",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/87e510dbc23687990165ad3b558e30019a65193a/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/fbb4aa4d5f57bbfb7f0cad2029d257e9f68b3e3f"
+      }
+    ]
+  },
+  {
+    "sha": "cca2c7fefa015a69226659b4564ebb71f8bfb648",
+    "node_id": "C_kwDOUY1WENoAKGNjYTJjN2ZlZmEwMTVhNjkyMjY2NTliNDU2NGViYjcxZjhiZmI2NDg",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:50:04Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T09:50:04Z"
+      },
+      "message": "Include restoration utility in workflow-produced archives",
+      "tree": {
+        "sha": "a182a0755e94cf61253943c89b57a757594a396d",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/a182a0755e94cf61253943c89b57a757594a396d"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/cca2c7fefa015a69226659b4564ebb71f8bfb648",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/cca2c7fefa015a69226659b4564ebb71f8bfb648",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/cca2c7fefa015a69226659b4564ebb71f8bfb648",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/cca2c7fefa015a69226659b4564ebb71f8bfb648/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "87e510dbc23687990165ad3b558e30019a65193a",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/87e510dbc23687990165ad3b558e30019a65193a",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/87e510dbc23687990165ad3b558e30019a65193a"
+      }
+    ]
+  },
+  {
+    "sha": "e513bed3ff2094544292ec3fd17159b22dc141d0",
+    "node_id": "C_kwDOUY1WENoAKGU1MTNiZWQzZmYyMDk0NTQ0MjkyZWMzZmQxNzE1OWIyMmRjMTQxZDA",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:08:11Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:08:11Z"
+      },
+      "message": "Preserve repository README and its uploaded attachments",
+      "tree": {
+        "sha": "8829b4261739fcf31726ce4802b496111f0b9cc2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/8829b4261739fcf31726ce4802b496111f0b9cc2"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/e513bed3ff2094544292ec3fd17159b22dc141d0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e513bed3ff2094544292ec3fd17159b22dc141d0",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e513bed3ff2094544292ec3fd17159b22dc141d0",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e513bed3ff2094544292ec3fd17159b22dc141d0/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cca2c7fefa015a69226659b4564ebb71f8bfb648",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/cca2c7fefa015a69226659b4564ebb71f8bfb648",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/cca2c7fefa015a69226659b4564ebb71f8bfb648"
+      }
+    ]
+  },
+  {
+    "sha": "1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+    "node_id": "C_kwDOUY1WENoAKDFjYWE5MmZjNjE5YTY0ZjE2YjAyYTI3ZjdhMzAyMGRhMWYyYmYzZTk",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:14:24Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:14:24Z"
+      },
+      "message": "Archive release source packages and refresh changed revisions",
+      "tree": {
+        "sha": "80a06600f0c673907d64fb4e443e4805908f3396",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/80a06600f0c673907d64fb4e443e4805908f3396"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e513bed3ff2094544292ec3fd17159b22dc141d0",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e513bed3ff2094544292ec3fd17159b22dc141d0",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e513bed3ff2094544292ec3fd17159b22dc141d0"
+      }
+    ]
+  },
+  {
+    "sha": "3d1181b6a317f5e812cba7fff2f1841d71d00940",
+    "node_id": "C_kwDOUY1WENoAKDNkMTE4MWI2YTMxN2Y1ZTgxMmNiYTdmZmYyZjE4NDFkNzFkMDA5NDA",
+    "commit": {
+      "author": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:16:15Z"
+      },
+      "committer": {
+        "name": "nexicturbo",
+        "email": "turbonexic@gmail.com",
+        "date": "2026-09-13T10:16:15Z"
+      },
+      "message": "Use archive endpoint media negotiation for source downloads",
+      "tree": {
+        "sha": "fde47af330e0eaeeffca99d5efe3b67903bb303e",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/fde47af330e0eaeeffca99d5efe3b67903bb303e"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/3d1181b6a317f5e812cba7fff2f1841d71d00940",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/3d1181b6a317f5e812cba7fff2f1841d71d00940",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/3d1181b6a317f5e812cba7fff2f1841d71d00940",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/3d1181b6a317f5e812cba7fff2f1841d71d00940/comments",
+    "author": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nexicturbo",
+      "id": 202719529,
+      "node_id": "U_kgDODBVBKQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202719529?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nexicturbo",
+      "html_url": "https://github.com/nexicturbo",
+      "followers_url": "https://api.github.com/users/nexicturbo/followers",
+      "following_url": "https://api.github.com/users/nexicturbo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nexicturbo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nexicturbo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nexicturbo/subscriptions",
+      "organizations_url": "https://api.github.com/users/nexicturbo/orgs",
+      "repos_url": "https://api.github.com/users/nexicturbo/repos",
+      "events_url": "https://api.github.com/users/nexicturbo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nexicturbo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/1caa92fc619a64f16b02a27f7a3020da1f2bf3e9"
+      }
+    ]
+  }
+]

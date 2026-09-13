@@ -1,0 +1,414 @@
+[
+  {
+    "sha": "f4dd8e5d6974f0c8897423d028791833c629e72c",
+    "node_id": "C_kwDOUY3RUtoAKGY0ZGQ4ZTVkNjk3NGYwYzg4OTc0MjNkMDI4NzkxODMzYzYyOWU3MmM",
+    "commit": {
+      "author": {
+        "name": "Codex",
+        "email": "codex@localhost",
+        "date": "2026-09-13T09:24:42Z"
+      },
+      "committer": {
+        "name": "Codex",
+        "email": "codex@localhost",
+        "date": "2026-09-13T09:27:13Z"
+      },
+      "message": "Add repository archive workflow with verified media preservation",
+      "tree": {
+        "sha": "951be4f33a906df21bdafe6eacafaadf27a305e5",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/951be4f33a906df21bdafe6eacafaadf27a305e5"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/f4dd8e5d6974f0c8897423d028791833c629e72c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f4dd8e5d6974f0c8897423d028791833c629e72c",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f4dd8e5d6974f0c8897423d028791833c629e72c",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f4dd8e5d6974f0c8897423d028791833c629e72c/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2"
+      }
+    ]
+  },
+  {
+    "sha": "7195e8990703c480a9c6378edff9eb684f9036ce",
+    "node_id": "C_kwDOUY3RUtoAKDcxOTVlODk5MDcwM2M0ODBhOWM2Mzc4ZWRmZjllYjY4NGY5MDM2Y2U",
+    "commit": {
+      "author": {
+        "name": "Codex",
+        "email": "codex@localhost",
+        "date": "2026-09-13T09:29:35Z"
+      },
+      "committer": {
+        "name": "Codex",
+        "email": "codex@localhost",
+        "date": "2026-09-13T09:29:35Z"
+      },
+      "message": "Document live archive verification for attogram/THE-ERROR-IS-THE-MESSAGE#60",
+      "tree": {
+        "sha": "8868a669703a1aa0afbedc179c940cd43a147a21",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/8868a669703a1aa0afbedc179c940cd43a147a21"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/7195e8990703c480a9c6378edff9eb684f9036ce",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/7195e8990703c480a9c6378edff9eb684f9036ce",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/7195e8990703c480a9c6378edff9eb684f9036ce",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/7195e8990703c480a9c6378edff9eb684f9036ce/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "f4dd8e5d6974f0c8897423d028791833c629e72c",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f4dd8e5d6974f0c8897423d028791833c629e72c",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f4dd8e5d6974f0c8897423d028791833c629e72c"
+      }
+    ]
+  },
+  {
+    "sha": "a48d33527c18437b70f6ce9d7983800a862950ec",
+    "node_id": "C_kwDOUY3RUtoAKGE0OGQzMzUyN2MxODQzN2I3MGY2Y2U5ZDc5ODM4MDBhODYyOTUwZWM",
+    "commit": {
+      "author": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T09:55:37Z"
+      },
+      "committer": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T09:55:37Z"
+      },
+      "message": "Record successful hosted archive and matching media evidence",
+      "tree": {
+        "sha": "2ec3ae0ded360be8a6766af48ca72ac66f3c0e39",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/2ec3ae0ded360be8a6766af48ca72ac66f3c0e39"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/a48d33527c18437b70f6ce9d7983800a862950ec",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/a48d33527c18437b70f6ce9d7983800a862950ec",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/a48d33527c18437b70f6ce9d7983800a862950ec",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/a48d33527c18437b70f6ce9d7983800a862950ec/comments",
+    "author": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7195e8990703c480a9c6378edff9eb684f9036ce",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/7195e8990703c480a9c6378edff9eb684f9036ce",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/7195e8990703c480a9c6378edff9eb684f9036ce"
+      }
+    ]
+  },
+  {
+    "sha": "e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+    "node_id": "C_kwDOUY3RUtoAKGU2ZGMwMDU3NjRmYzBmMGJjYTJiMDBjMTE0MDlmZjdkNWZkZTk1MjY",
+    "commit": {
+      "author": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:07:26Z"
+      },
+      "committer": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:07:26Z"
+      },
+      "message": "Preserve generated release source archives and verify safe redirects",
+      "tree": {
+        "sha": "f17eb53cf16670f93540fca943ad2ba3ab4fb5db",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/f17eb53cf16670f93540fca943ad2ba3ab4fb5db"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e6dc005764fc0f0bca2b00c11409ff7d5fde9526/comments",
+    "author": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a48d33527c18437b70f6ce9d7983800a862950ec",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/a48d33527c18437b70f6ce9d7983800a862950ec",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/a48d33527c18437b70f6ce9d7983800a862950ec"
+      }
+    ]
+  },
+  {
+    "sha": "8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+    "node_id": "C_kwDOUY3RUtoAKDhjYmE5N2EzOGFiZWZhNWEwYTZjYTEwMzBkY2JmNDc2YTUyY2FiZTA",
+    "commit": {
+      "author": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:11:14Z"
+      },
+      "committer": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:11:14Z"
+      },
+      "message": "Use correct GitHub media negotiation for source archive downloads",
+      "tree": {
+        "sha": "ab6178c170063f9c6aa79c951db0bded1daf0d0c",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/ab6178c170063f9c6aa79c951db0bded1daf0d0c"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0/comments",
+    "author": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e6dc005764fc0f0bca2b00c11409ff7d5fde9526",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e6dc005764fc0f0bca2b00c11409ff7d5fde9526"
+      }
+    ]
+  },
+  {
+    "sha": "9cd37d105064882b13bf9cecf525c84a1e2010d2",
+    "node_id": "C_kwDOUY3RUtoAKDljZDM3ZDEwNTA2NDg4MmIxM2JmOWNlY2Y1MjVjODRhMWUyMDEwZDI",
+    "commit": {
+      "author": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:16:26Z"
+      },
+      "committer": {
+        "name": "Manntouu",
+        "email": "zxc405111061@gmail.com",
+        "date": "2026-09-13T10:16:26Z"
+      },
+      "message": "Record final source-archive coverage and independent verification",
+      "tree": {
+        "sha": "c6e303d9e33f1315e0d1be3ff4f788e949db449c",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/c6e303d9e33f1315e0d1be3ff4f788e949db449c"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/9cd37d105064882b13bf9cecf525c84a1e2010d2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/9cd37d105064882b13bf9cecf525c84a1e2010d2",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/9cd37d105064882b13bf9cecf525c84a1e2010d2",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/9cd37d105064882b13bf9cecf525c84a1e2010d2/comments",
+    "author": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Manntouu",
+      "id": 181519195,
+      "node_id": "U_kgDOCtHDWw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/181519195?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Manntouu",
+      "html_url": "https://github.com/Manntouu",
+      "followers_url": "https://api.github.com/users/Manntouu/followers",
+      "following_url": "https://api.github.com/users/Manntouu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Manntouu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Manntouu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Manntouu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Manntouu/orgs",
+      "repos_url": "https://api.github.com/users/Manntouu/repos",
+      "events_url": "https://api.github.com/users/Manntouu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Manntouu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/8cba97a38abefa5a0a6ca1030dcbf476a52cabe0"
+      }
+    ]
+  }
+]

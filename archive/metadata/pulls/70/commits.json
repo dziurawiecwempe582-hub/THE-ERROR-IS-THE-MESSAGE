@@ -1,0 +1,412 @@
+[
+  {
+    "sha": "f72221a27f8a3006749a5a35fe46186c952d3900",
+    "node_id": "C_kwDOUY4lB9oAKGY3MjIyMWEyN2Y4YTMwMDY3NDlhNWEzNWZlNDYxODZjOTUyZDM5MDA",
+    "commit": {
+      "author": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:12:33Z"
+      },
+      "committer": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:12:33Z"
+      },
+      "message": "feat(archive): add zero-dependency repository and media dumper with mobile Actions workflow (#60)",
+      "tree": {
+        "sha": "266bf667db0c82345e66570daa404006818c28bc",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/266bf667db0c82345e66570daa404006818c28bc"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/f72221a27f8a3006749a5a35fe46186c952d3900",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f72221a27f8a3006749a5a35fe46186c952d3900",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f72221a27f8a3006749a5a35fe46186c952d3900",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f72221a27f8a3006749a5a35fe46186c952d3900/comments",
+    "author": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2"
+      }
+    ]
+  },
+  {
+    "sha": "6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+    "node_id": "C_kwDOUY4lB9oAKDY0OTNhNzkyZjNjYjQ0MWY5YzBkZGY4YjVlNzkxNjVmYjZmZGFiZTM",
+    "commit": {
+      "author": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:14:33Z"
+      },
+      "committer": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:14:33Z"
+      },
+      "message": "fix(dump): 修复多层附件URL捕获与原始文件名保留，并支持Actions自定义目标仓库",
+      "tree": {
+        "sha": "e3024925f54ba680d31513d618f157d0a7f4703b",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/e3024925f54ba680d31513d618f157d0a7f4703b"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3/comments",
+    "author": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f72221a27f8a3006749a5a35fe46186c952d3900",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/f72221a27f8a3006749a5a35fe46186c952d3900",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/f72221a27f8a3006749a5a35fe46186c952d3900"
+      }
+    ]
+  },
+  {
+    "sha": "94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+    "node_id": "C_kwDOUY4lB9oAKDk0ZGUyM2I2MjgyYmEzZDY0NWQ0MTFjYzRkMmYwYWRmNzM5YTVhMGU",
+    "commit": {
+      "author": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:20:16Z"
+      },
+      "committer": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:20:16Z"
+      },
+      "message": "feat(dump): 增加流式分块下载、重定向文件名探测、防XSS转义与SUMMARY.md生成",
+      "tree": {
+        "sha": "e83f741d68063238710ec5362ac1a940bfca7b03",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/e83f741d68063238710ec5362ac1a940bfca7b03"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/94de23b6282ba3d645d411cc4d2f0adf739a5a0e/comments",
+    "author": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/6493a792f3cb441f9c0ddf8b5e79165fb6fdabe3"
+      }
+    ]
+  },
+  {
+    "sha": "367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+    "node_id": "C_kwDOUY4lB9oAKDM2Nzc0MWQ5NWEzYTQzYjVjMTMxODJlMzFmOWZlYzZjYjNjNmFjNGM",
+    "commit": {
+      "author": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:22:01Z"
+      },
+      "committer": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:22:01Z"
+      },
+      "message": "feat(dump): 100%覆盖官方SPEC: 增加Releases全量抓取与Direct Repo Dump自动推仓支持",
+      "tree": {
+        "sha": "e328d44d205f0d3c7102710cae7e37edff76bfc0",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/e328d44d205f0d3c7102710cae7e37edff76bfc0"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c/comments",
+    "author": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/94de23b6282ba3d645d411cc4d2f0adf739a5a0e",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/94de23b6282ba3d645d411cc4d2f0adf739a5a0e"
+      }
+    ]
+  },
+  {
+    "sha": "64edaa1b307be798baa86323add00199f598edee",
+    "node_id": "C_kwDOUY4lB9oAKDY0ZWRhYTFiMzA3YmU3OThiYWE4NjMyM2FkZDAwMTk5ZjU5OGVkZWU",
+    "commit": {
+      "author": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:23:26Z"
+      },
+      "committer": {
+        "name": "shuoYun114",
+        "email": "shuoYun114@users.noreply.github.com",
+        "date": "2026-09-13T10:23:26Z"
+      },
+      "message": "test: 添加全覆盖自动化单元测试套件并在 CI 中集成验证",
+      "tree": {
+        "sha": "3e3b52b6cb20d4ff1c2d1b7bb796ca9cf18410a3",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/3e3b52b6cb20d4ff1c2d1b7bb796ca9cf18410a3"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/64edaa1b307be798baa86323add00199f598edee",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/64edaa1b307be798baa86323add00199f598edee",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/64edaa1b307be798baa86323add00199f598edee",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/64edaa1b307be798baa86323add00199f598edee/comments",
+    "author": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "shuoYun114",
+      "id": 190249024,
+      "node_id": "U_kgDOC1b4QA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190249024?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/shuoYun114",
+      "html_url": "https://github.com/shuoYun114",
+      "followers_url": "https://api.github.com/users/shuoYun114/followers",
+      "following_url": "https://api.github.com/users/shuoYun114/following{/other_user}",
+      "gists_url": "https://api.github.com/users/shuoYun114/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/shuoYun114/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/shuoYun114/subscriptions",
+      "organizations_url": "https://api.github.com/users/shuoYun114/orgs",
+      "repos_url": "https://api.github.com/users/shuoYun114/repos",
+      "events_url": "https://api.github.com/users/shuoYun114/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/shuoYun114/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/367741d95a3a43b5c13182e31f9fec6cb3c6ac4c"
+      }
+    ]
+  }
+]

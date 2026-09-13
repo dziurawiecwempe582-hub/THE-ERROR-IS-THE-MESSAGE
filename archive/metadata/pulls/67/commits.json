@@ -1,0 +1,330 @@
+[
+  {
+    "sha": "00392e9222acbecd3676aee340bb5718be868487",
+    "node_id": "C_kwDOUY3AJtoAKDAwMzkyZTkyMjJhY2JlY2QzNjc2YWVlMzQwYmI1NzE4YmU4Njg0ODc",
+    "commit": {
+      "author": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:35:54Z"
+      },
+      "committer": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:35:54Z"
+      },
+      "message": "Add verifiable repository archive and mobile workflow",
+      "tree": {
+        "sha": "eea026814f5f6613f12ff8457e0cf57e0c4dbe50",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/eea026814f5f6613f12ff8457e0cf57e0c4dbe50"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/00392e9222acbecd3676aee340bb5718be868487",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/00392e9222acbecd3676aee340bb5718be868487",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/00392e9222acbecd3676aee340bb5718be868487",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/00392e9222acbecd3676aee340bb5718be868487/comments",
+    "author": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/c3d0a1f7359dc306ebf603fa0b3caf111da7c6f2"
+      }
+    ]
+  },
+  {
+    "sha": "4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+    "node_id": "C_kwDOUY3AJtoAKDQ5MDE1MjJiNDllM2U2MTg5ZGNiYmVlNDI4NWVlNmNjNTYxODZhYzE",
+    "commit": {
+      "author": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:42:21Z"
+      },
+      "committer": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:42:21Z"
+      },
+      "message": "Preserve release source archives and fix real download failures",
+      "tree": {
+        "sha": "3b5d0302ad80c08e91faad6076b35824b9aef25e",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/3b5d0302ad80c08e91faad6076b35824b9aef25e"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/4901522b49e3e6189dcbbee4285ee6cc56186ac1/comments",
+    "author": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "00392e9222acbecd3676aee340bb5718be868487",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/00392e9222acbecd3676aee340bb5718be868487",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/00392e9222acbecd3676aee340bb5718be868487"
+      }
+    ]
+  },
+  {
+    "sha": "e4f828b98f60662ecc536c6859be6b4e67fa4836",
+    "node_id": "C_kwDOUY3AJtoAKGU0ZjgyOGI5OGY2MDY2MmVjYzUzNmM2ODU5YmU2YjRlNjdmYTQ4MzY",
+    "commit": {
+      "author": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:44:03Z"
+      },
+      "committer": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:44:03Z"
+      },
+      "message": "Verify batched publication using a real local Git remote",
+      "tree": {
+        "sha": "3b329623489cb40d954bda213c6c9e4e05f4f533",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/3b329623489cb40d954bda213c6c9e4e05f4f533"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/e4f828b98f60662ecc536c6859be6b4e67fa4836",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e4f828b98f60662ecc536c6859be6b4e67fa4836",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e4f828b98f60662ecc536c6859be6b4e67fa4836",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e4f828b98f60662ecc536c6859be6b4e67fa4836/comments",
+    "author": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/4901522b49e3e6189dcbbee4285ee6cc56186ac1",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/4901522b49e3e6189dcbbee4285ee6cc56186ac1"
+      }
+    ]
+  },
+  {
+    "sha": "84fac3827327caef80511c7b2ca53e341c025799",
+    "node_id": "C_kwDOUY3AJtoAKDg0ZmFjMzgyNzMyN2NhZWY4MDUxMWM3YjJjYTUzZTM0MWMwMjU3OTk",
+    "commit": {
+      "author": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:46:23Z"
+      },
+      "committer": {
+        "name": "dziurawiecwempe582-hub",
+        "email": "296785064+dziurawiecwempe582-hub@users.noreply.github.com",
+        "date": "2026-09-13T09:46:23Z"
+      },
+      "message": "Use the GitHub API media type for release archive redirects",
+      "tree": {
+        "sha": "20d88d6829901cf2b69c440d0150c37cb941bdf0",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/trees/20d88d6829901cf2b69c440d0150c37cb941bdf0"
+      },
+      "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/git/commits/84fac3827327caef80511c7b2ca53e341c025799",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/84fac3827327caef80511c7b2ca53e341c025799",
+    "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/84fac3827327caef80511c7b2ca53e341c025799",
+    "comments_url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/84fac3827327caef80511c7b2ca53e341c025799/comments",
+    "author": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dziurawiecwempe582-hub",
+      "id": 296785064,
+      "node_id": "U_kgDOEbCUqA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/296785064?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dziurawiecwempe582-hub",
+      "html_url": "https://github.com/dziurawiecwempe582-hub",
+      "followers_url": "https://api.github.com/users/dziurawiecwempe582-hub/followers",
+      "following_url": "https://api.github.com/users/dziurawiecwempe582-hub/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dziurawiecwempe582-hub/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dziurawiecwempe582-hub/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dziurawiecwempe582-hub/subscriptions",
+      "organizations_url": "https://api.github.com/users/dziurawiecwempe582-hub/orgs",
+      "repos_url": "https://api.github.com/users/dziurawiecwempe582-hub/repos",
+      "events_url": "https://api.github.com/users/dziurawiecwempe582-hub/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dziurawiecwempe582-hub/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e4f828b98f60662ecc536c6859be6b4e67fa4836",
+        "url": "https://api.github.com/repos/attogram/THE-ERROR-IS-THE-MESSAGE/commits/e4f828b98f60662ecc536c6859be6b4e67fa4836",
+        "html_url": "https://github.com/attogram/THE-ERROR-IS-THE-MESSAGE/commit/e4f828b98f60662ecc536c6859be6b4e67fa4836"
+      }
+    ]
+  }
+]
