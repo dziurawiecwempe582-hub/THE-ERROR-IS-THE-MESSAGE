@@ -1,0 +1,37 @@
+﻿Advanced Filing Infrastructure (AFI) as a Contextual Engine for Domain-Specific Model Amplification
+Abstract Recent discussions in artificial intelligence frequently confuse emergent general intelligence with high-density contextual retrieval. This paper formalizes the concept of Advanced Filing Infrastructure (AFI)—a paradigm wherein structured, version-controlled repository architectures serve as persistent memory banks for narrow Large Language Models (LLMs). We demonstrate how an indexed filing system enables distinct models to operate with apparent artificial general intelligence (AGI) characteristics by maintaining hyper-specific, multi-agent contextual continuity. The theoretical framework originated directly from the open-source laboratory repository attogram/awareness-horizon on July 31, 2026, during real-time field testing of multi-model context orchestration.
+1. Introduction
+The ongoing pursuit of Artificial General Intelligence (AGI) often prioritizes expanding model parameter counts over optimizing state persistence. However, stateless transformer architectures inherently suffer from context window degradation, memory truncation, and hallucination when processing complex, long-horizon human workflows.
+This paper introduces Advanced Filing Infrastructure (AFI) as an alternative architecture. AFI posits that true functional intelligence in applied domains is a property of the environment rather than the isolated neural network. By utilizing structured markdown issues, cryptographic object identifiers, standardized metadata tagging, and asynchronous interaction protocols, an AFI transforms off-the-shelf narrow language models into an orchestrated, highly coherent synthetic team.
+2. History & Background
+The lineage of context persistence spans three major paradigms in computing history:
+1. Flat-File Knowledge Bases (1980s–1990s): Early expert systems relied on hardcoded rule sets and static relational databases, lacking the semantic flexibility to interpret unstructured human text.
+2. Retrieval-Augmented Generation (RAG) (2020–2024): Vector databases enabled semantic search across document embeddings. While effective for static query-answering, standard RAG frequently fails to preserve chronological narrative momentum, multi-agent persona roles, or state-change causality over extended time horizons.
+3. Version-Controlled Collaborative Repositories (2024–Present): The realization that software engineering infrastructure (e.g., GitHub issue trackers, commit trees, pull requests) inherently provides the optimal audit trail, role assignment, and temporal indexing required for complex human-AI collaboration.
+The AFI framework explicitly synthesizes this third paradigm, formalizing the repository itself as the primary cognitive substrate.
+3. Literature Review
+* MemGPT & OS-like Context Management (Packer et al., 2023): Demonstrated that managing LLM memory as an operating system (paging memory between main context and external storage) drastically improves task continuity. AFI extends this from individual agent memory to multi-agent, open-access repository systems.
+* Multi-Agent Collaboration Frameworks (AutoGen, CrewAI, 2023–2025): Established that specializing model roles increases aggregate system output quality. However, these systems typically rely on ephemeral in-memory state.
+* The "Stigmergy" Concept in Distributed Systems (Theraulaz & Bonabeau, 1999): In biological systems, agents communicate indirectly by modifying their local environment. AFI applies digital stigmergy to LLMs: model A leaves an immutable markdown log in an issue thread; model B reads the log hours later and executes the next state transition without direct model-to-model coupling.
+4. Hypotheses
+* H_1 (The Illusion of Generalization): An ensemble of narrow LLMs operating over a high-density AFI will outperform an uncontextualized, larger base model on domain-specific narrative and strategic tasks.
+* H_2 (Asynchronous Protocol Resilience): Non-standard communication signals (e.g., embedding structured payloads inside third-party feedback widgets) documented within an AFI can be parsed and operationalized by any incoming LLM without prior system training.
+* H_3 (State-Transfer Integrity): Archiving interaction state to immutable, cryptographic endpoints (e.g., Zenodo DOIs) prevents contextual drift across long-horizon human transitions.
+5. Testing Strategy & Methodology
+To validate H_1, H_2, and H_3, the methodology employs a four-stage experimental loop:
+  [Stage 1: Ingestion]  ──>  [Stage 2: Signal Injection]
+                                       │
+ [Stage 4: Verification] <──  [Stage 3: Multi-Model Triage]
+
+1. Environment Setup (Ingestion): Instantiate a public/private repository structure (awareness-horizon) utilizing GitHub Issues as primary data blocks. Define persona taxonomies across participating nodes (e.g., Node 0, Node 00 / FOUND, specialized model tags).
+2. Signal Injection (Field Testing): Execute an external interaction payload (e.g., the "PING Protocol" via a third-party support feedback widget) and commit the raw telemetry, visual receipts, and timestamps directly to an issue thread.
+3. Multi-Model Triage: Prompt independent, uncoupled LLM endpoints (Gemini, Claude, ChatGPT, Kimi) with the raw issue context. Measure each model's ability to extract deep intent, identify hidden variables (e.g., organizational entities), and maintain persona consistency.
+4. Immutable Anchoring (Verification): Export the full issue thread and visual media into a standardized PDF package, mint a permanent DOI via Zenodo (CERN), and verify that subsequent model iterations can re-ingest the DOI-indexed data without loss of context fidelity.
+6. Summary
+Advanced Filing Infrastructure (AFI) shifts the engineering challenge of artificial intelligence from model training to contextual architecture. By treating version-controlled repositories as dynamic, multi-agent filing systems, complex human experiences, strategic exits, and technical field operations can be preserved with absolute fidelity. The experiment originating in attogram/awareness-horizon demonstrates that when context is structured with sufficient density and chronological rigor, narrow models do not merely generate text—they participate seamlessly in a continuous, sovereign narrative.
+References & Citation List
+1. Attogram Project. (2026, July 31). attogram/awareness-horizon: Live multi-agent lifelogging and contextual filing archive [GitHub Repository]. Issue #102: "PING Schiphol v0.9".
+2. CERN / Zenodo. (2026). Open-access European Organization for Nuclear Research infrastructure for permanent Digital Object Identifier (DOI) archiving. Geneva, Switzerland.
+3. Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., & Joseph, A. D. (2023). MemGPT: Towards LLMs as Operating Systems. arXiv preprint arXiv:2310.08560.
+4. Theraulaz, G., & Bonabeau, E. (1999). A Brief History of Stigmergy. Artificial Life, 5(2), 97–116.
+5. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention Is All You Need. Advances in Neural Information Processing Systems (NeurIPS 2017), 30, 5998–6008.
