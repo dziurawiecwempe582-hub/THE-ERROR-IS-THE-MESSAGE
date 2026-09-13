@@ -1,0 +1,70 @@
+name: Archive repository
+run-name: Archive ${{ inputs.source_repository }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_repository:
+        description: Public repository to archive (OWNER/REPOSITORY)
+        required: true
+        default: attogram/THE-ERROR-IS-THE-MESSAGE
+        type: string
+      save_report_artifact:
+        description: Also keep a small downloadable manifest report for 7 days
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repository-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out this repository's code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Export issues, pull requests, releases and attachments
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SOURCE_REPOSITORY: ${{ inputs.source_repository }}
+        run: python tools/repo_dump.py --repo "$SOURCE_REPOSITORY" --output archive
+
+      - name: Verify every archived file
+        run: python tools/repo_dump.py --verify archive
+
+      - name: Publish to this repository's archive branch
+        run: python tools/publish_archive.py --archive archive --push
+
+      - name: Save manifest report
+        if: ${{ always() && inputs.save_report_artifact }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: repository-archive-report
+          path: archive/manifest.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Show archive location
+        if: success()
+        env:
+          DESTINATION_REPOSITORY: ${{ github.repository }}
+          SERVER_URL: ${{ github.server_url }}
+        run: |
+          printf 'Archive published: %s/%s/tree/repository-archive/archive\n' "$SERVER_URL" "$DESTINATION_REPOSITORY" >> "$GITHUB_STEP_SUMMARY"
